@@ -3,12 +3,7 @@
 /* @var $data Post */
 ?>
 
-<div class="view">
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('assunto')); ?>:</b>
-	<?php echo CHtml::encode($data->getRelated('categoria_id')->assunto); ?>
-	<br /><br />
-
+<div>
 	<?php echo CHtml::encode(Yii::app()->dateFormatter->format("dd/MM/yyy", strtotime($data->data_post))); ?>
 	<br />
 
@@ -21,4 +16,6 @@
 	<?php echo CHtml::encode($data->texto); ?>
 	<br />
 
+	<br />
+	<hr>
 </div>

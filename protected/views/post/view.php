@@ -14,18 +14,20 @@ $this->menu=array(
 	array('label'=>'Delete Post', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->post_id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Post', 'url'=>array('admin')),
 );
-?>
+?>	
 
-<h1>View Post #<?php echo $model->post_id; ?></h1>
+<b><?php echo CHtml::encode($model->getAttributeLabel('assunto')); ?>:</b>
+<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>
+<br /><br />
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'post_id',
-		'data_post',
-		'texto',
-		'autor',
-		'titulo',
-		'categoria_id',
-	),
-)); ?>
+<?php echo CHtml::encode(Yii::app()->dateFormatter->format("dd/MM/yyy", strtotime($model->data_post))); ?>
+<br />
+
+Por <i> <?php echo CHtml::encode($model->autor); ?> </i>
+<br />
+<br />
+
+<h2><?php echo CHtml::encode($model->titulo); ?></h2>
+
+<?php echo CHtml::encode($model->texto); ?>
+<br />
