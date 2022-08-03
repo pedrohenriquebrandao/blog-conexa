@@ -32,10 +32,10 @@ class Post extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('data_post, autor, titulo, categoria_id', 'required'),
+			array('autor, titulo, texto, categoria_id', 'required'),
 			array('autor, titulo', 'length', 'max'=>191),
 			array('categoria_id', 'length', 'max'=>10),
-			array('texto', 'safe'),
+			array('texto', 'length', 'max'=>2000),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('post_id, data_post, texto, autor, titulo, categoria_id', 'safe', 'on'=>'search'),
@@ -50,7 +50,7 @@ class Post extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'categoria' => array(self::BELONGS_TO, 'Categorias', 'categoria_id'),
+			'categoria_id' => array(self::BELONGS_TO, 'Categoria', 'categoria_id'),
 		);
 	}
 

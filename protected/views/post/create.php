@@ -4,15 +4,13 @@
 
 $this->breadcrumbs=array(
 	'Posts'=>array('index'),
-	'Create',
+	'Fazer um post',
 );
 
 $this->menu=array(
-	array('label'=>'List Post', 'url'=>array('index')),
-	array('label'=>'Manage Post', 'url'=>array('admin')),
+	array('label'=>'Listar posts', 'url'=>array('index')),
+	array('label'=>'Gerenciar posts', 'url'=>array('admin')),
 );
 ?>
-
-<h1>Create Post</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

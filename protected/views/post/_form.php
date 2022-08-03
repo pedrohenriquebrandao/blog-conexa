@@ -15,21 +15,9 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos com <span class="required">*</span> são obrigatórios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'data_post'); ?>
-		<?php echo $form->textField($model,'data_post'); ?>
-		<?php echo $form->error($model,'data_post'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'texto'); ?>
-		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'texto'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'autor'); ?>
@@ -45,12 +33,19 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'categoria_id'); ?>
-		<?php echo $form->textField($model,'categoria_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php $opts = CHtml::listData(Categoria::model()->findAll(),'categoria_id','assunto'); ?>
+		<?php echo $form->dropDownList($model, 'categoria_id', $opts) ?>
 		<?php echo $form->error($model,'categoria_id'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'texto'); ?>
+		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>60)); ?>
+		<?php echo $form->error($model,'texto'); ?>
+	</div>
+
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
