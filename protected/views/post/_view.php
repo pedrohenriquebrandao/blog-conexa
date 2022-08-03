@@ -12,9 +12,9 @@
 		<br />
 		<br />
 
-		<h2><?php echo CHtml::encode($data->titulo, array('class', 'card-title')); ?></h2>
+		<h2><?php echo CHtml::encode($data->titulo, array('class' => 'card-title')); ?></h2>
 
-		<?php echo CHtml::encode($data->texto, array('class', 'card-text')); ?>
+		<?php echo CHtml::encode($data->texto, array('class' => 'card-text')); ?>
 		<br />
 	</div>
 </div>

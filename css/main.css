@@ -3,7 +3,6 @@ body
 	margin: 0;
 	padding: 0;
 	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
 }
 
@@ -49,7 +48,7 @@ body
 
 #mainmenu
 {
-	background:white url(bg.gif) repeat-x left top;
+	background:#F2803C;
 }
 
 #mainmenu ul
@@ -67,7 +66,7 @@ body
 {
 	color:#ffffff;
 	background-color:transparent;
-	font-size:12px;
+	font-size:14px;
 	font-weight:bold;
 	text-decoration:none;
 	padding:5px 8px;
@@ -75,8 +74,8 @@ body
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
-	color: #6399cd;
-	background-color:#EFF4FA;
+	color: #696464;
+	background-color:#F4D0B4;
 	text-decoration:none;
 }
 
