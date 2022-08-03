@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+<div class="form form-group">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'post-form',
@@ -15,37 +15,37 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Campos com <span class="required">*</span> são obrigatórios.</p>
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'autor'); ?>
-		<?php echo $form->textField($model,'autor',array('size'=>60,'maxlength'=>191)); ?>
+		<?php echo $form->textField($model,'autor',array('size'=>60,'maxlength'=>255, 'class' => 'form-control')); ?>
 		<?php echo $form->error($model,'autor'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'titulo'); ?>
-		<?php echo $form->textField($model,'titulo',array('size'=>60,'maxlength'=>191)); ?>
+		<?php echo $form->textField($model,'titulo',array('size'=>60,'maxlength'=>255, 'class' => 'form-control')); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'categoria_id'); ?>
 		<?php $opts = CHtml::listData(Categoria::model()->findAll(),'categoria_id','assunto'); ?>
-		<?php echo $form->dropDownList($model, 'categoria_id', $opts) ?>
+		<?php echo $form->dropDownList($model, 'categoria_id', $opts, array('class' => 'form-select')) ?>
 		<?php echo $form->error($model,'categoria_id'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'texto'); ?>
-		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>60)); ?>
+		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>50, 'class' => 'form-control')); ?>
 		<?php echo $form->error($model,'texto'); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Save'); ?>
+	<div>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Save', array('class' => 'btn btn-primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

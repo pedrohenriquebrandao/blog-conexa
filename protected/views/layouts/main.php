@@ -15,14 +15,13 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body>
-
-<div class="container" id="page">
-
-	<div id="header">
+<div id="header">
 		<div id="logo">
 			<img src="../../images/conexa.png" alt="">
 		</div>
@@ -34,6 +33,7 @@
 				array('label'=>'Últimas publicações', 'url'=>array('/post/index')),
 				array('label'=>'Fazer um post', 'url'=>array('/post/create')),
 			),
+			
 		)); ?>
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
@@ -42,6 +42,10 @@
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
 
+
+<div class="container">
+
+	
 	<?php echo $content; ?>
 
 	<div class="clear"></div>

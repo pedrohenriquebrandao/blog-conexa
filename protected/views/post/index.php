@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Publicações',
+	'Últimas Publicações',
 );
 
 $this->menu=array(

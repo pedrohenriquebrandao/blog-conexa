@@ -31,3 +31,4 @@ Por <i> <?php echo CHtml::encode($model->autor); ?> </i>
 
 <?php echo CHtml::encode($model->texto); ?>
 <br />
+
