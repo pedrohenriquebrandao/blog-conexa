@@ -23,14 +23,16 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		<div id="logo">
+			<img src="../../images/conexa.png" alt="">
+		</div>
 	</div><!-- header -->
 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Todos os posts', 'url'=>array('/post/index')),
+				array('label'=>'Publicações', 'url'=>array('/post/index')),
 				array('label'=>'Fazer um post', 'url'=>array('/post/create')),
 			),
 		)); ?>
