@@ -122,7 +122,14 @@ class PostController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Post');
+		$dataProvider=new CActiveDataProvider('Post', array(
+			'criteria'=>array(
+				'order'=>'post_id DESC',
+		   ),
+			'pagination' => array(
+				'pageSize' => 3
+			) 
+		));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

@@ -31,8 +31,7 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Publicações', 'url'=>array('/post/index')),
+				array('label'=>'Últimas publicações', 'url'=>array('/post/index')),
 				array('label'=>'Fazer um post', 'url'=>array('/post/create')),
 			),
 		)); ?>
