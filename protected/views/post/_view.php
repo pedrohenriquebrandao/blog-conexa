@@ -31,7 +31,7 @@
 		?>
 		<br />
 
-		<?php echo CHtml::link('Continuar lendo', 'index.php?r=post/view&id='.$data->post_id.'', array('class' => 'btn btn-sm btn-primary mt-3')); ?>
+		<?php echo CHtml::link('Continuar lendo', 'index.php?r=post/view&id='.$data->post_id.'', array('class' => 'btn btn-sm btn-outline-primary mt-3')); ?>
 		
 	</div>
 </div>
