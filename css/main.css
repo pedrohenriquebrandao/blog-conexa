@@ -73,8 +73,8 @@ body
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
-	color: #696464;
-	background-color:#F4D0B4;
+	color: #ffffff;
+	background-color:#313030;
 	text-decoration:none;
 }
 
@@ -225,3 +225,7 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+a:hover{
+	color: #F2803C !important;
+ } 

@@ -71,7 +71,7 @@ class PostController extends Controller
 		{
 			$model->attributes=$_POST['Post'];
 			if($model->save())
-				$this->redirect('post/index');
+				$this->redirect(array('view','id'=>$model->post_id));
 		}
 
 		$this->render('create',array(
