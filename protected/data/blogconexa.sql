@@ -4,6 +4,13 @@ CREATE TABLE IF NOT EXISTS categorias (
   PRIMARY KEY (categoria_id)
 );
 
+CREATE TABLE IF NOT EXISTS comentarios (
+  comentario_id int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  data_comentario timestamp DEFAULT CURRENT_TIMESTAMP,
+  texto tinytext NOT NULL,
+  PRIMARY KEY (comentario_id)
+);
+
 CREATE TABLE IF NOT EXISTS posts (
   post_id int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   data_post timestamp DEFAULT CURRENT_TIMESTAMP,
@@ -14,7 +21,7 @@ CREATE TABLE IF NOT EXISTS posts (
   categoria_id int(10) UNSIGNED NOT NULL,
   comentario_id int(10) UNSIGNED NOT NULL,
   PRIMARY KEY (post_id),
-  FOREIGN KEY (categoria_id) REFERENCES categorias(categoria_id) ON UPDATE RESTRICT ON DELETE CASCADE
+  FOREIGN KEY (categoria_id) REFERENCES categorias(categoria_id) ON UPDATE RESTRICT ON DELETE CASCADE,
   FOREIGN KEY (comentario_id) REFERENCES comentarios(comentario_id) ON UPDATE RESTRICT ON DELETE CASCADE
 );
 
@@ -25,9 +32,3 @@ INSERT INTO categorias (assunto) VALUES ('Agenda');
 INSERT INTO categorias (assunto) VALUES ('Parceiros');
 INSERT INTO categorias (assunto) VALUES ('Outros');
 
-CREATE TABLE IF NOT EXISTS comentarios (
-  comentario_id int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  data_comentario timestamp DEFAULT CURRENT_TIMESTAMP,
-  texto tinytext NOT NULL,
-  PRIMARY KEY (comentario_id),
-);
