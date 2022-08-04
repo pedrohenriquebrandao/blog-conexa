@@ -58,14 +58,13 @@
 		<?php echo $content; ?>
 
 		<div class="clear"></div>
-
-		<div id="footer">
-			Copyright &copy; <?php echo date('Y'); ?> by Conexa.<br/>
-			All Rights Reserved.<br/>
-			<?php echo Yii::powered(); ?>
-		</div><!-- footer -->
-
 	</div><!-- page -->
+	
+	<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+		<div class="container text-center">
+			<small>Copyright &copy; <?php echo date('Y'); ?> by Conexa</small>
+		</div>
+	</footer>
 
 </body>
 </html>
