@@ -130,8 +130,15 @@ class PostController extends Controller
 				'pageSize' => 3
 			) 
 		));
+
+		$model=new Post('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Post']))
+			$model->attributes=$_GET['Post'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 
@@ -145,7 +152,7 @@ class PostController extends Controller
 		if(isset($_GET['Post']))
 			$model->attributes=$_GET['Post'];
 
-		$this->render('admin',array(
+		$this->render('_view',array(
 			'model'=>$model,
 		));
 	}

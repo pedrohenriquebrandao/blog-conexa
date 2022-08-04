@@ -11,6 +11,7 @@
 	'method'=>'get',
 )); ?>
 
+
 	<div class="row">
 		<?php echo $form->label($model,'post_id'); ?>
 		<?php echo $form->textField($model,'post_id',array('size'=>10,'maxlength'=>10)); ?>
