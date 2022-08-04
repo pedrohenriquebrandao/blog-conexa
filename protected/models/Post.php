@@ -35,7 +35,7 @@ class Post extends CActiveRecord
 			array('autor, titulo, texto, categoria_id', 'required'),
 			array('autor, titulo', 'length', 'max'=>191),
 			array('categoria_id', 'length', 'max'=>10),
-			array('texto', 'length', 'max'=>2000),
+			array('texto', 'length', 'max'=>10000),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('post_id, data_post, texto, autor, titulo, categoria_id', 'safe', 'on'=>'search'),

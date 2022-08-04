@@ -1,13 +1,13 @@
 CREATE TABLE IF NOT EXISTS categorias (
-  categoria_id int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  categoria_id int(10) UNSIGNED AUTO_INCREMENT,
   assunto varchar(191) NOT NULL,
   PRIMARY KEY (categoria_id)
 );
 
 CREATE TABLE IF NOT EXISTS posts (
-  post_id int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  post_id int(10) UNSIGNED AUTO_INCREMENT,
   data_post timestamp DEFAULT CURRENT_TIMESTAMP,
-  texto mediumtext NOT NULL,
+  texto BLOB NOT NULL,
   autor varchar(255) NOT NULL,
   titulo varchar(255) NOT NULL,
   categoria_id int(10) UNSIGNED NOT NULL,

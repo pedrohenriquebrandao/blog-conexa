@@ -3265,3 +3265,682 @@ REQUEST_URI=/index.php?r=post/index
 in C:\blog-conexa\protected\views\post\_view.php (10)
 in C:\blog-conexa\protected\views\post\index.php (19)
 in C:\blog-conexa\protected\controllers\PostController.php (141)
+2022/08/04 20:58:37 [error] [exception.ParseError] ParseError: syntax error, unexpected '{' in C:\blog-conexa\protected\views\post\view.php:40
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#1 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#2 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#3 C:\blog-conexa\protected\controllers\PostController.php(55): CController->render('view', Array)
+#4 [internal function]: PostController->actionView('10')
+#5 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#6 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#7 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#16 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#17 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\blog-conexa\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/index.php?r=post/view&id=10
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---
+2022/08/04 21:02:05 [error] [php] include(Html.php): failed to open stream: No such file or directory (C:\Users\Pedro\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\blog-conexa\protected\views\post\view.php(36): spl_autoload_call()
+#1 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#2 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#3 C:\Users\Pedro\yii\framework\web\CController.php(872): PostController->renderFile()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(785): PostController->renderPartial()
+#5 C:\blog-conexa\protected\controllers\PostController.php(55): PostController->render()
+#6 unknown(0): PostController->actionView()
+#7 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#8 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#11 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\Users\Pedro\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#13 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#14 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\Users\Pedro\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#17 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): PostController->run()
+#18 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\blog-conexa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/view&id=10
+in C:\blog-conexa\protected\views\post\view.php (36)
+in C:\blog-conexa\protected\controllers\PostController.php (55)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:03:43 [error] [exception.Error] Error: Call to undefined function encode() in C:\blog-conexa\protected\views\post\view.php:36
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#1 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#2 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#3 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#4 C:\blog-conexa\protected\controllers\PostController.php(55): CController->render('view', Array)
+#5 [internal function]: PostController->actionView('10')
+#6 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#7 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#8 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#18 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\blog-conexa\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=post/view&id=10
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:04:40 [error] [exception.Error] Error: Call to undefined function encode() in C:\blog-conexa\protected\views\post\view.php:40
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#1 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#2 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#3 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#4 C:\blog-conexa\protected\controllers\PostController.php(55): CController->render('view', Array)
+#5 [internal function]: PostController->actionView('10')
+#6 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#7 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#8 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#18 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\blog-conexa\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=post/view&id=10
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:05:05 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\blog-conexa\protected\controllers\PostController.php:171
+Stack trace:
+#0 C:\blog-conexa\protected\controllers\PostController.php(55): PostController->loadModel('10')
+#1 [internal function]: PostController->actionView('10')
+#2 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/view&id=10
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:11:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\blog-conexa\protected\controllers\PostController.php (73)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:11:52 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3) in C:\Users\Pedro\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\blog-conexa\protected\controllers\PostController.php(73): CActiveRecord->save()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---
+2022/08/04 21:12:47 [error] [exception.CException] CException: Post has an invalid validation rule. The rule must specify attributes to be validated and the validator name. in C:\Users\Pedro\yii\framework\base\CModel.php:289
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\Users\Pedro\yii\framework\base\CModel.php(547): CModel->getValidators()
+#2 C:\Users\Pedro\yii\framework\base\CModel.php(468): CModel->getSafeAttributeNames()
+#3 C:\Users\Pedro\yii\framework\base\CComponent.php(152): CModel->setAttributes(Array)
+#4 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(162): CComponent->__set('attributes', Array)
+#5 C:\blog-conexa\protected\controllers\PostController.php(72): CActiveRecord->__set('attributes', Array)
+#6 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#17 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\blog-conexa\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---
+2022/08/04 21:12:52 [error] [exception.CException] CException: Post has an invalid validation rule. The rule must specify attributes to be validated and the validator name. in C:\Users\Pedro\yii\framework\base\CModel.php:289
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\Users\Pedro\yii\framework\base\CModel.php(304): CModel->getValidators('autor')
+#2 C:\Users\Pedro\yii\framework\web\helpers\CHtml.php(1520): CModel->isAttributeRequired('autor')
+#3 C:\Users\Pedro\yii\framework\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(Post), 'autor', Array)
+#4 C:\blog-conexa\protected\views\post\_form.php(35): CActiveForm->labelEx(Object(Post), 'autor')
+#5 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require('C:\\blog-conexa\\...')
+#6 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#7 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#8 C:\blog-conexa\protected\views\post\create.php(16): CController->renderPartial('_form', Array)
+#9 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require('C:\\blog-conexa\\...')
+#10 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#11 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#12 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#13 C:\blog-conexa\protected\controllers\PostController.php(78): CController->render('create', Array)
+#14 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#25 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\blog-conexa\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:12:55 [error] [exception.CException] CException: Post has an invalid validation rule. The rule must specify attributes to be validated and the validator name. in C:\Users\Pedro\yii\framework\base\CModel.php:289
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\Users\Pedro\yii\framework\base\CModel.php(304): CModel->getValidators('autor')
+#2 C:\Users\Pedro\yii\framework\web\helpers\CHtml.php(1520): CModel->isAttributeRequired('autor')
+#3 C:\Users\Pedro\yii\framework\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(Post), 'autor', Array)
+#4 C:\blog-conexa\protected\views\post\_form.php(35): CActiveForm->labelEx(Object(Post), 'autor')
+#5 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require('C:\\blog-conexa\\...')
+#6 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#7 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#8 C:\blog-conexa\protected\views\post\create.php(16): CController->renderPartial('_form', Array)
+#9 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require('C:\\blog-conexa\\...')
+#10 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#11 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#12 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#13 C:\blog-conexa\protected\controllers\PostController.php(78): CController->render('create', Array)
+#14 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#25 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\blog-conexa\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:13:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\blog-conexa\protected\controllers\PostController.php (73)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:13:43 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3) in C:\Users\Pedro\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\blog-conexa\protected\controllers\PostController.php(73): CActiveRecord->save()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---
+2022/08/04 21:13:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\blog-conexa\protected\controllers\PostController.php (73)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:13:56 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3) in C:\Users\Pedro\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\blog-conexa\protected\controllers\PostController.php(73): CActiveRecord->save()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---
+2022/08/04 21:14:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\blog-conexa\protected\controllers\PostController.php (73)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:14:14 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3) in C:\Users\Pedro\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\blog-conexa\protected\controllers\PostController.php(73): CActiveRecord->save()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---
+2022/08/04 21:15:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\blog-conexa\protected\controllers\PostController.php (73)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:15:07 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3) in C:\Users\Pedro\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\blog-conexa\protected\controllers\PostController.php(73): CActiveRecord->save()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---
+2022/08/04 21:21:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\blog-conexa\protected\controllers\PostController.php (73)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:21:34 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3) in C:\Users\Pedro\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\blog-conexa\protected\controllers\PostController.php(73): CActiveRecord->save()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---
+2022/08/04 21:23:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\blog-conexa\protected\controllers\PostController.php (73)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:23:33 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3) in C:\Users\Pedro\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\blog-conexa\protected\controllers\PostController.php(73): CActiveRecord->save()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---
+2022/08/04 21:24:46 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\blog-conexa\protected\controllers\PostController.php (73)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:24:46 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3) in C:\Users\Pedro\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\blog-conexa\protected\controllers\PostController.php(73): CActiveRecord->save()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---
+2022/08/04 21:30:26 [error] [php] include(HtmlPurifier.php): failed to open stream: No such file or directory (C:\Users\Pedro\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\blog-conexa\protected\views\post\view.php(40): spl_autoload_call()
+#1 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#2 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#3 C:\Users\Pedro\yii\framework\web\CController.php(872): PostController->renderFile()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(785): PostController->renderPartial()
+#5 C:\blog-conexa\protected\controllers\PostController.php(55): PostController->render()
+#6 unknown(0): PostController->actionView()
+#7 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#8 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#11 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\Users\Pedro\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#13 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#14 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\Users\Pedro\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#17 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): PostController->run()
+#18 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\blog-conexa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/view&id=1
+in C:\blog-conexa\protected\views\post\view.php (40)
+in C:\blog-conexa\protected\controllers\PostController.php (55)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:30:41 [error] [php] include(HtmlPurifier.php): failed to open stream: No such file or directory (C:\Users\Pedro\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\blog-conexa\protected\views\post\view.php(40): spl_autoload_call()
+#1 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#2 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#3 C:\Users\Pedro\yii\framework\web\CController.php(872): PostController->renderFile()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(785): PostController->renderPartial()
+#5 C:\blog-conexa\protected\controllers\PostController.php(55): PostController->render()
+#6 unknown(0): PostController->actionView()
+#7 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#8 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#11 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\Users\Pedro\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#13 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#14 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\Users\Pedro\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#17 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): PostController->run()
+#18 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\blog-conexa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/view&id=1
+in C:\blog-conexa\protected\views\post\view.php (40)
+in C:\blog-conexa\protected\controllers\PostController.php (55)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:30:49 [error] [exception.Error] Error: Access to undeclared static property: Yii::$app in C:\blog-conexa\protected\views\post\view.php:40
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#1 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#2 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#3 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#4 C:\blog-conexa\protected\controllers\PostController.php(55): CController->render('view', Array)
+#5 [internal function]: PostController->actionView('1')
+#6 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#7 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#8 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#18 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\blog-conexa\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:31:11 [error] [exception.Error] Error: Access to undeclared static property: Yii::$app in C:\blog-conexa\protected\views\post\view.php:40
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#1 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#2 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#3 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#4 C:\blog-conexa\protected\controllers\PostController.php(55): CController->render('view', Array)
+#5 [internal function]: PostController->actionView('1')
+#6 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#7 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#8 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#18 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\blog-conexa\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:31:23 [error] [exception.ParseError] ParseError: syntax error, unexpected ')' in C:\blog-conexa\protected\views\post\view.php:40
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#1 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#2 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#3 C:\blog-conexa\protected\controllers\PostController.php(55): CController->render('view', Array)
+#4 [internal function]: PostController->actionView('1')
+#5 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#6 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#7 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#16 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#17 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\blog-conexa\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:31:28 [error] [exception.Error] Error: Access to undeclared static property: Yii::$app in C:\blog-conexa\protected\views\post\view.php:40
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#1 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#2 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#3 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#4 C:\blog-conexa\protected\controllers\PostController.php(55): CController->render('view', Array)
+#5 [internal function]: PostController->actionView('1')
+#6 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#7 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#8 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#18 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\blog-conexa\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:31:38 [error] [exception.CException] CException: Property "CWebApplication.formatter" is not defined. in C:\Users\Pedro\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\base\CModule.php(105): CComponent->__get('formatter')
+#1 C:\blog-conexa\protected\views\post\view.php(40): CModule->__get('formatter')
+#2 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require('C:\\blog-conexa\\...')
+#3 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#4 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#5 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#6 C:\blog-conexa\protected\controllers\PostController.php(55): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('1')
+#8 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\blog-conexa\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:36:53 [error] [exception.Error] Error: Call to undefined method CHtml::html() in C:\blog-conexa\protected\views\post\view.php:40
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#1 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#2 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#3 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#4 C:\blog-conexa\protected\controllers\PostController.php(55): CController->render('view', Array)
+#5 [internal function]: PostController->actionView('1')
+#6 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#7 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#8 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#18 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\blog-conexa\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:37:43 [error] [exception.Error] Error: Call to undefined method CHtml::tags() in C:\blog-conexa\protected\views\post\view.php:40
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#1 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#2 C:\Users\Pedro\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#3 C:\Users\Pedro\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#4 C:\blog-conexa\protected\controllers\PostController.php(55): CController->render('view', Array)
+#5 [internal function]: PostController->actionView('1')
+#6 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#7 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#8 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#18 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\blog-conexa\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/04 21:52:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\blog-conexa\protected\controllers\PostController.php (73)
+in C:\blog-conexa\index.php (13)
+2022/08/04 21:52:10 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE2\xAD\x90 Au...' for column 'texto' at row 1. The SQL statement executed was: INSERT INTO `posts` (`autor`, `titulo`, `categoria_id`, `texto`) VALUES (:yp0, :yp1, :yp2, :yp3) in C:\Users\Pedro\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Users\Pedro\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\blog-conexa\protected\controllers\PostController.php(73): CActiveRecord->save()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---

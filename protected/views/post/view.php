@@ -22,9 +22,9 @@ $this->menu=array(
 		<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>	
 	</div>
 	
-	<br />
+	<br /><br />
 
-	<h1>
+	<h1 class="pb-4">
 		<?php echo CHtml::encode($model->titulo); ?>
 	</h1>
 

@@ -26,6 +26,8 @@
 	<link rel="shortcut icon" href="../../images/favicon.ico" />
 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
 
+	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 

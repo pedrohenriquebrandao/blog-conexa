@@ -23,18 +23,18 @@
 			<?php echo CHtml::link($data->titulo, 'index.php?r=post/view&id='.$data->post_id.'', array('class' => 'card-title text-dark text-decoration-none')); ?>
 		</h1>
 
-		<div class="h5">
+		<div class="h4 pt-4">
 			<?php
 				$string = strip_tags($data->texto);
 				if (strlen($string) > 200) {
 				
 					// truncate string
-					$stringCut = substr($string, 0, 150);
+					$stringCut = substr($string, 0, 80);
 					$endPoint = strrpos($stringCut, ' ');
 				
 					//if the string doesn't contain any space then it will cut without word basis.
 					$string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-					$string .= '... (Continue lendo)';
+					$string .= '...';
 				}
 
 				echo CHtml::encode($string, array('class' => 'card-text')); 
