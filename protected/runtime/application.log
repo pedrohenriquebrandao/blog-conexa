@@ -3106,3 +3106,162 @@ REQUEST_URI=/index.php?r=post/view&id=2
 in C:\blog-conexa\protected\views\post\view.php (32)
 in C:\blog-conexa\protected\controllers\PostController.php (55)
 in C:\blog-conexa\index.php (13)
+2022/08/04 20:39:36 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "search". in C:\Users\Pedro\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(270): CController->missingAction('search')
+#1 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('search')
+#2 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/search')
+#3 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/search&id=2
+HTTP_REFERER=http://localhost:8080/index.php?r=post/view&id=2
+---
+2022/08/04 20:40:18 [error] [php] Undefined variable: data (C:\blog-conexa\protected\views\post\_view.php:9)
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(872): PostController->renderFile()
+#1 C:\Users\Pedro\yii\framework\web\CController.php(785): PostController->renderPartial()
+#2 C:\blog-conexa\protected\controllers\PostController.php(156): PostController->render()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionAdmin()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): PostController->run()
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/admin
+in C:\blog-conexa\protected\views\post\_view.php (9)
+in C:\blog-conexa\protected\controllers\PostController.php (156)
+in C:\blog-conexa\index.php (13)
+2022/08/04 20:40:26 [error] [php] Undefined variable: data (C:\blog-conexa\protected\views\post\_view.php:9)
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(872): PostController->renderFile()
+#1 C:\Users\Pedro\yii\framework\web\CController.php(785): PostController->renderPartial()
+#2 C:\blog-conexa\protected\controllers\PostController.php(156): PostController->render()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionAdmin()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): PostController->run()
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/admin
+in C:\blog-conexa\protected\views\post\_view.php (9)
+in C:\blog-conexa\protected\controllers\PostController.php (156)
+in C:\blog-conexa\index.php (13)
+2022/08/04 20:41:15 [error] [php] Undefined variable: data (C:\blog-conexa\protected\views\post\_view.php:9)
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(872): PostController->renderFile()
+#1 C:\Users\Pedro\yii\framework\web\CController.php(785): PostController->renderPartial()
+#2 C:\blog-conexa\protected\controllers\PostController.php(156): PostController->render()
+#3 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionAdmin()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#6 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Pedro\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#9 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#12 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): PostController->run()
+#13 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\blog-conexa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/admin
+in C:\blog-conexa\protected\views\post\_view.php (9)
+in C:\blog-conexa\protected\controllers\PostController.php (156)
+in C:\blog-conexa\index.php (13)
+2022/08/04 20:41:53 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "search". in C:\Users\Pedro\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(270): CController->missingAction('search')
+#1 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('search')
+#2 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/search')
+#3 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/search&id=2
+HTTP_REFERER=http://localhost:8080/index.php?r=post/view&id=2
+---
+2022/08/04 20:42:03 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "search". in C:\Users\Pedro\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(270): CController->missingAction('search')
+#1 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('search')
+#2 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/search')
+#3 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/search
+---
+2022/08/04 20:42:18 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "_search". in C:\Users\Pedro\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(270): CController->missingAction('_search')
+#1 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('_search')
+#2 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/_search')
+#3 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/_search
+---
+2022/08/04 20:42:23 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "search". in C:\Users\Pedro\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(270): CController->missingAction('search')
+#1 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('search')
+#2 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/search')
+#3 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/search
+---
+2022/08/04 20:43:19 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "search". in C:\Users\Pedro\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(270): CController->missingAction('search')
+#1 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('search')
+#2 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/search')
+#3 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/search
+---
+2022/08/04 20:49:03 [error] [php] Undefined variable: model (C:\blog-conexa\protected\views\post\_view.php:10)
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\zii\widgets\CListView.php(291): PostController->renderFile()
+#1 C:\Users\Pedro\yii\framework\zii\widgets\CBaseListView.php(181): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\Users\Pedro\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#4 C:\Users\Pedro\yii\framework\zii\widgets\CBaseListView.php(149): CListView->renderContent()
+#5 C:\Users\Pedro\yii\framework\web\CBaseController.php(182): CListView->run()
+#6 C:\blog-conexa\protected\views\post\index.php(19): PostController->widget()
+#7 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#8 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#9 C:\Users\Pedro\yii\framework\web\CController.php(872): PostController->renderFile()
+#10 C:\Users\Pedro\yii\framework\web\CController.php(785): PostController->renderPartial()
+#11 C:\blog-conexa\protected\controllers\PostController.php(141): PostController->render()
+#12 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#13 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#15 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\Users\Pedro\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#17 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#18 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\Users\Pedro\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#21 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): PostController->run()
+#22 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\blog-conexa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/index
+in C:\blog-conexa\protected\views\post\_view.php (10)
+in C:\blog-conexa\protected\views\post\index.php (19)
+in C:\blog-conexa\protected\controllers\PostController.php (141)

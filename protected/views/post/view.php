@@ -17,8 +17,12 @@ $this->menu=array(
 ?>	
 
 <div class="text-center text-justify">
-	<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>
-	<br /><br />
+	
+	<div class="h5">
+		<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>	
+	</div>
+	
+	<br />
 
 	<h1>
 		<?php echo CHtml::encode($model->titulo); ?>
@@ -29,9 +33,9 @@ $this->menu=array(
 	<br />
 
 	<div class="pb-4" style="text-transform:capitalize">
-			<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($model->data_post))); ?>
-			<br />
-		</div>
+		<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($model->data_post))); ?>
+		<br />
+	</div>
 	
 	<?php echo CHtml::encode($model->texto); ?>
 	<br />

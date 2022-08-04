@@ -5,6 +5,10 @@
 
 <div class="mt-3">
 	<div class="card-body">
+
+		<div class="h5">
+			<?php echo CHtml::encode($data->getRelated('categoria_id')->assunto); ?>	
+		</div>
 		<div style="text-transform:capitalize">
 			<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($data->data_post))); ?>
 			<br />
@@ -30,7 +34,7 @@
 				
 					//if the string doesn't contain any space then it will cut without word basis.
 					$string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-					$string .= '...';
+					$string .= '... (Continue lendo)';
 				}
 
 				echo CHtml::encode($string, array('class' => 'card-text')); 
