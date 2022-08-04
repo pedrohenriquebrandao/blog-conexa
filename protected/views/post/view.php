@@ -3,7 +3,7 @@
 /* @var $model Post */
 
 $this->breadcrumbs=array(
-	'Posts'=>array('index'),
+	'Últimas Publicações'=>array('index'),
 	$model->post_id,
 );
 
@@ -16,19 +16,24 @@ $this->menu=array(
 );
 ?>	
 
-<b><?php echo CHtml::encode($model->getAttributeLabel('assunto')); ?>:</b>
-<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>
-<br /><br />
+<div class="text-center text-justify">
+	<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>
+	<br /><br />
 
-<?php echo CHtml::encode(Yii::app()->dateFormatter->format("dd/MM/yyy", strtotime($model->data_post))); ?>
-<br />
+	<h1>
+		<?php echo CHtml::encode($model->titulo); ?>
+	</h1>
 
-Por <i> <?php echo CHtml::encode($model->autor); ?> </i>
-<br />
-<br />
+	<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+	<b> <?php echo CHtml::encode($model->autor); ?> </b>
+	<br />
 
-<h2><?php echo CHtml::encode($model->titulo); ?></h2>
-
-<?php echo CHtml::encode($model->texto); ?>
-<br />
+	<div class="pb-4" style="text-transform:capitalize">
+			<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($model->data_post))); ?>
+			<br />
+		</div>
+	
+	<?php echo CHtml::encode($model->texto); ?>
+	<br />
+</div>
 
