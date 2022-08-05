@@ -21,54 +21,61 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
 	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 	<link rel="shortcut icon" href="../../images/favicon.ico" />
 	<link rel="icon" type="image/x-icon" href="../../images/favicon.ico" />
-
-	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body style="font-family: 'Lato', sans-serif;">
-	<div class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="p-2">
-			<img src="../../images/conexa.png" alt="Logo">
+	<div class="navbar navbar-expand-lg navbar-light p-4" style="background-color: #f1f1f1">
+		<div class="px-5">
+			<?php echo CHtml::link('<img src="../../images/conexa.png" alt="Logo">', 'index.php?r=post/index', array('class' => 'btn')); ?>
 		</div>
+		<div class="px-5 ms-auto mb-2 mb-lg-0">
+			<?php echo CHtml::link('Página Inicial', 'index.php?r=post/index', array('class' => 'btn btn-lg')); ?>
+			<?php echo CHtml::link('Publicar', 'index.php?r=post/create', array('class' => 'btn btn-lg btn-primary')); ?>
+		</div>
+		
 		</div><!-- header -->
 
-		<div id="mainmenu">
+		<!--<div id="mainmenu">
 			<?php $this->widget('zii.widgets.CMenu',array(
 				'items'=>array(
 					array('label'=>'Últimas publicações', 'url'=>array('/post/index')),
-					array('label'=>'Fazer um post', 'url'=>array('/post/create')),
+					array('label'=>'Publicar', 'url'=>array('/post/create')),
 				),
 			));
 			?>
-		</div><!-- mainmenu -->
+		</div>
 		<?php if(isset($this->breadcrumbs)):?>
 			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 				'links'=>$this->breadcrumbs,
-			)); ?><!-- breadcrumbs -->
-		<?php endif?>
-
-			
-
+			)); ?>
+		<?php endif?> -->
+	</div>
 	<div class="container">
 		
 		<?php echo $content; ?>
 
 		<div class="clear"></div>
 	</div><!-- page -->
-			
-	<div class="pt-5">
-		<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
-			<div class="container text-center">
-				<small>Copyright &copy; <?php echo date('Y'); ?> by Conexa</small>
-			</div>
-		</footer>
-	</div>
 
+	<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">
+  <small>Copyright &copy; <?php echo date('Y'); ?> by Conexa</small>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+	
+	
 </body>
 </html>

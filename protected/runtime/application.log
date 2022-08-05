@@ -3944,3 +3944,62 @@ Stack trace:
 REQUEST_URI=/index.php?r=post/create
 HTTP_REFERER=http://localhost:8080/index.php?r=post/create
 ---
+2022/08/04 22:23:53 [error] [php] Undefined variable: data (C:\blog-conexa\protected\views\layouts\main.php:39)
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\widgets\CContentDecorator.php(76): PostController->renderFile()
+#1 C:\Users\Pedro\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\Users\Pedro\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\Users\Pedro\yii\framework\web\CBaseController.php(215): CContentDecorator->run()
+#4 C:\Users\Pedro\yii\framework\web\CBaseController.php(309): PostController->endWidget()
+#5 C:\blog-conexa\protected\views\layouts\column1.php(6): PostController->endContent()
+#6 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#7 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#8 C:\Users\Pedro\yii\framework\web\CController.php(787): PostController->renderFile()
+#9 C:\blog-conexa\protected\controllers\PostController.php(141): PostController->render()
+#10 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#11 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#13 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\Users\Pedro\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#15 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#16 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\Users\Pedro\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#19 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): PostController->run()
+#20 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\blog-conexa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/index
+in C:\blog-conexa\protected\views\layouts\main.php (39)
+in C:\blog-conexa\protected\views\layouts\column1.php (6)
+in C:\blog-conexa\protected\controllers\PostController.php (141)
+2022/08/04 22:24:26 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in C:\blog-conexa\protected\views\layouts\main.php:39
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#1 C:\Users\Pedro\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#2 C:\Users\Pedro\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 C:\Users\Pedro\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 C:\Users\Pedro\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\Users\Pedro\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\blog-conexa\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#7 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require('C:\\blog-conexa\\...')
+#8 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\blog-conexa\\...', Array, true)
+#9 C:\Users\Pedro\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\blog-conexa\\...', Array, true)
+#10 C:\blog-conexa\protected\controllers\PostController.php(141): CController->render('index', Array)
+#11 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#12 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\Users\Pedro\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\Users\Pedro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#21 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#22 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\blog-conexa\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/index.php?r=post/index
+HTTP_REFERER=http://localhost:8080/index.php?r=post/create
+---

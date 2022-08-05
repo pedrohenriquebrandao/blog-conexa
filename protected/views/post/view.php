@@ -15,14 +15,14 @@ $this->menu=array(
 	array('label'=>'Manage Post', 'url'=>array('admin')),
 );
 ?>	
-
+<div class="ms-auto">
+	<?php echo CHtml::link('<i class="fa fa-chevron-left" aria-hidden="true"></i> Voltar', 'index.php?r=post/index', array('class' => 'btn btn-outline-dark')); ?>
+</div>
 <div class="text-center text-justify">
 	
-	<div class="h5">
+	<div class="h5 pb-4">
 		<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>	
 	</div>
-	
-	<br /><br />
 
 	<h1 class="pb-4">
 		<?php echo CHtml::encode($model->titulo); ?>
@@ -30,14 +30,14 @@ $this->menu=array(
 
 	<i class="fa fa-user-circle-o" aria-hidden="true"></i>
 	<b> <?php echo CHtml::encode($model->autor); ?> </b>
-	<br />
 
 	<div class="pb-4" style="text-transform:capitalize">
 		<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($model->data_post))); ?>
-		<br />
 	</div>
 	
-	<?php echo CHtml::encode($model->texto); ?>
+	<div class="h5">
+		<?php echo CHtml::encode($model->texto); ?>
+	</div>
 	<br />
 </div>
 

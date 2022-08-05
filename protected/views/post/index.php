@@ -12,7 +12,9 @@ $this->menu=array(
 );
 ?>
 
-<h1>Últimas publicações</h1>
+<div class="pt-4">
+  <h1 class="display-5">Últimas publicações</h1>
+</div>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
