@@ -7,7 +7,9 @@
 	<div class="card-body">
 
 		<div class="h5">
-			<?php echo CHtml::encode($data->getRelated('categoria_id')->assunto); ?>	
+			<span class="badge rounded-pill bg-primary">
+				<?php echo CHtml::encode($data->getRelated('categoria_id')->assunto); ?>	
+			</span>
 		</div>
 		<div style="text-transform:capitalize">
 			<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($data->data_post))); ?>

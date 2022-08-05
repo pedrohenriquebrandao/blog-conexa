@@ -18,7 +18,7 @@ $this->menu=array(
 <div class="ms-auto">
 	<?php echo CHtml::link('<i class="fa fa-chevron-left" aria-hidden="true"></i> Voltar', 'index.php?r=post/index', array('class' => 'btn btn-outline-dark')); ?>
 </div>
-<div class="text-center text-justify">
+<div class="text-center">
 	
 	<div class="h5 pb-4">
 		<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>	
@@ -41,3 +41,19 @@ $this->menu=array(
 	<br />
 </div>
 
+<div>
+	<?php 
+		$newComentario = new Comentario();
+		$newComentario->post_id = $model->post_id;
+		$this->renderPartial('//comentario/_form', array("model" => $newComentario));
+	?>
+		<?php 
+			if($comentarios) {
+				foreach($comentarios as $comentario) {
+					$this->renderPartial('//comentario/_view', array("data" => $comentario));
+				}
+			} else {
+				echo "<div class='col-6 text-center alert alert-warning' style='margin: 0 auto;'>Ainda não existem comentários para esta publicação!</div>";
+			}
+		?>
+</div>

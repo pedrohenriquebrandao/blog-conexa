@@ -51,6 +51,7 @@ class Post extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'categoria_id' => array(self::BELONGS_TO, 'Categoria', 'categoria_id'),
+			'comentarios' => array(self::HAS_MANY, 'Comentario', 'post_id', 'order'=>'data_comentario DESC'),
 		);
 	}
 

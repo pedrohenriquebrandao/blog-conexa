@@ -1,23 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "categorias".
+ * This is the model class for table "comentarios".
  *
- * The followings are the available columns in table 'categorias':
- * @property string $categoria_id
- * @property string $assunto
+ * The followings are the available columns in table 'comentarios':
+ * @property string $comentario_id
+ * @property string $data_comentario
+ * @property string $texto
+ * @property string $post_id
  *
  * The followings are the available model relations:
- * @property Posts[] $posts
+ * @property Posts $post
  */
-class Categoria extends CActiveRecord
+class Comentario extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'categorias';
+		return 'comentarios';
 	}
 
 	/**
@@ -28,11 +30,12 @@ class Categoria extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('assunto', 'required'),
-			array('assunto', 'length', 'max'=>191),
+			array('texto, post_id', 'required'),
+			array('texto', 'length', 'max'=>255),
+			array('post_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('categoria_id, assunto', 'safe', 'on'=>'search'),
+			array('comentario_id, data_comentario, texto, post_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,7 +47,7 @@ class Categoria extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'post_id' => array(self::HAS_MANY, 'Posts', 'categoria_id'),
+			'post_id' => array(self::BELONGS_TO, 'Posts', 'post_id'),
 		);
 	}
 
@@ -54,8 +57,10 @@ class Categoria extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'categoria_id' => 'Categoria',
-			'assunto' => 'Assunto',
+			'comentario_id' => 'Comentario',
+			'data_comentario' => 'Data Comentario',
+			'texto' => 'Texto',
+			'post_id' => 'Post',
 		);
 	}
 
@@ -76,9 +81,8 @@ class Categoria extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
-		$criteria->compare('categoria_id',$this->categoria_id,true);
-		$criteria->compare('assunto',$this->assunto,true);
+		
+		$criteria->compare('post_id',$this->post_id,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -89,7 +93,7 @@ class Categoria extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Categoria the static model class
+	 * @return Comentario the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

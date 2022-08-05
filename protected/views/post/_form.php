@@ -52,7 +52,7 @@
 
 	<div>
 		<?php echo $form->labelEx($model,'texto'); ?>
-		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>50, 'class' => 'form-control')); ?>
+		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>50, 'class' => 'form-control', 'placeholder' => 'Escreva seu texto...')); ?>
 		<?php echo $form->error($model,'texto'); ?>
 	</div>
 
