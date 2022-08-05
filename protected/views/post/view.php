@@ -12,9 +12,9 @@ $this->menu=array(
 	array('label'=>'Create Post', 'url'=>array('create')),
 	array('label'=>'Update Post', 'url'=>array('update', 'id'=>$model->post_id)),
 	array('label'=>'Delete Post', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->post_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Post', 'url'=>array('admin')),
 );
 ?>	
+
 <div class="ms-auto">
 	<?php echo CHtml::link('<i class="fa fa-chevron-left" aria-hidden="true"></i> Voltar', 'index.php?r=post/index', array('class' => 'btn btn-outline-dark')); ?>
 </div>

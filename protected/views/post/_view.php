@@ -6,12 +6,12 @@
 <div class="mt-3">
 	<div class="card-body">
 
-		<div class="h5">
+		<div class="h-">
 			<span class="badge rounded-pill bg-primary">
 				<?php echo CHtml::encode($data->getRelated('categoria_id')->assunto); ?>	
 			</span>
 		</div>
-		<div style="text-transform:capitalize">
+		<div class="pt-4" style="text-transform:capitalize">
 			<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($data->data_post))); ?>
 			<br />
 		</div>
