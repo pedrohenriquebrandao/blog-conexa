@@ -39,8 +39,8 @@ $this->menu=array(
 </div>
 <div class="text-center">
 	
-	<div class="h6 pb-4">
-		<span class="badge rounded-pill bg-primary">
+	<div class="h5 pb-4">
+		<span class="badge bg-primary">
 			<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>
 		</span>
 	</div>
@@ -50,7 +50,7 @@ $this->menu=array(
 	</div>
 
 	<i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
-	<div class="h5">
+	<div class="h5 pt-2">
 		<i><?php echo CHtml::encode($model->autor); ?> </i> 
 	</div>
 
@@ -58,7 +58,7 @@ $this->menu=array(
 		<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($model->data_post))); ?>
 	</div>
 	
-	<div class="h5">
+	<div class="h4">
 		<?php echo CHtml::encode($model->texto); ?>
 	</div>
 	<br />

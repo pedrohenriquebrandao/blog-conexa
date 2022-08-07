@@ -9620,3 +9620,31 @@ Stack trace:
 REQUEST_URI=/index.php?r=post/index
 HTTP_REFERER=http://localhost:8080/index.php?r=post/view&id=42
 ---
+2022/08/07 07:04:25 [error] [php] Undefined variable: data (C:\blog-conexa\protected\views\comentario\_form.php:44)
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(872): PostController->renderFile()
+#1 C:\blog-conexa\protected\views\post\view.php(75): PostController->renderPartial()
+#2 C:\Users\Pedro\yii\framework\web\CBaseController.php(126): require()
+#3 C:\Users\Pedro\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#4 C:\Users\Pedro\yii\framework\web\CController.php(872): PostController->renderFile()
+#5 C:\Users\Pedro\yii\framework\web\CController.php(785): PostController->renderPartial()
+#6 C:\blog-conexa\protected\controllers\PostController.php(57): PostController->render()
+#7 unknown(0): PostController->actionView()
+#8 C:\Users\Pedro\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#9 C:\Users\Pedro\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\Users\Pedro\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#12 C:\Users\Pedro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\Users\Pedro\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#14 C:\Users\Pedro\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#15 C:\Users\Pedro\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#16 C:\Users\Pedro\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\Users\Pedro\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#18 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): PostController->run()
+#19 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\blog-conexa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/view&id=18
+in C:\blog-conexa\protected\views\comentario\_form.php (44)
+in C:\blog-conexa\protected\views\post\view.php (75)
+in C:\blog-conexa\protected\controllers\PostController.php (57)
