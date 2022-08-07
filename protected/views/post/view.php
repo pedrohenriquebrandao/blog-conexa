@@ -45,12 +45,14 @@ $this->menu=array(
 		</span>
 	</div>
 
-	<h1 class="pb-4">
+	<div class="pb-4 display-4">
 		<?php echo CHtml::encode($model->titulo); ?>
-	</h1>
+	</div>
 
-	<i class="fa fa-user-circle-o" aria-hidden="true"></i>
-	<b> <?php echo CHtml::encode($model->autor); ?> </b>
+	<i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+	<div class="h5">
+		<i><?php echo CHtml::encode($model->autor); ?> </i> 
+	</div>
 
 	<div class="pb-4" style="text-transform:capitalize">
 		<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($model->data_post))); ?>
@@ -66,7 +68,12 @@ $this->menu=array(
 	<?php 
 		$newComentario = new Comentario();
 		$newComentario->post_id = $model->post_id;
-		$this->renderPartial('//comentario/_form', array("model" => $newComentario));
+
+		if(!Yii::app()->user->isGuest) {
+			$this->renderPartial('//comentario/_form', array("model" => $newComentario));
+		} else {
+			$this->renderPartial('//comentario/_form', array("model" => $newComentario));
+		}
 	?>
 		<?php 
 			if($comentarios) {

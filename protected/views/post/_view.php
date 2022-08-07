@@ -11,15 +11,14 @@
 				<?php echo CHtml::encode($data->getRelated('categoria_id')->assunto); ?>
 			</span>
 		</div>
-		<div class="pt-4" style="text-transform:capitalize">
+		<div class="pt-4 pb-2 h5" style="text-transform:capitalize">
 			<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($data->data_post))); ?>
-			<br />
 		</div>
 
-		<i class="fa fa-user-circle-o" aria-hidden="true"></i>
-		<i> <?php echo CHtml::encode($data->autor); ?> </i>
-		<br />
-		<br />
+		<i class="fa fa-user-circle fa-2x pb-2" aria-hidden="true"></i>
+		<div class="h3">
+			<i><?php echo CHtml::encode($data->autor); ?> </i> 
+		</div>
 
 		<?php echo CHtml::link($data->titulo, 'index.php?r=post/view&id='.$data->post_id.'', array('class' => 'card-title text-decoration-none post-link display-4')); ?>
 
@@ -39,9 +38,7 @@
 
 				echo CHtml::encode($string, array('class' => 'card-text')); 
 			?>
-			<br />
 		</div>
-		
 	</div>
 	<hr>
 </div>

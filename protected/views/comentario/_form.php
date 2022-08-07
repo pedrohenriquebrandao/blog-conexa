@@ -17,10 +17,17 @@
 )); ?>
 
 	<?php echo $form->errorSummary($model); ?>
-
+	
 	<div>
-		<?php echo $form->textArea($model,'texto',array('rows'=>3, 'class' => 'form-control', 'placeholder' => 'Escreva um comentário...')); ?>
-		<?php echo $form->error($model,'texto'); ?>
+		<?php 
+		if(!Yii::app()->user->isGuest) {
+			echo $form->textArea($model,'texto',array('rows'=>3, 'class' => 'form-control', 'placeholder' => 'Escreva um comentário...'));
+			echo $form->error($model,'texto'); 
+		} else {
+			echo $form->textArea($model,'texto',array('rows'=>3, 'class' => 'form-control disabled', 'placeholder' => 'Escreva um comentário...', 'disabled' => 'true'));
+			echo $form->error($model,'texto'); 
+		}
+		?>
 	</div>
 
 	<div style="display: none;">
@@ -30,7 +37,13 @@
 	</div>
 
 	<div>
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Comentar' : 'Save', array('class' => 'btn btn-success')); ?>
+		<?php 
+		if(!Yii::app()->user->isGuest) {
+			echo CHtml::submitButton($model->isNewRecord ? 'Comentar' : 'Save', array('class' => 'btn btn-success')); 
+		} else {
+			echo CHtml::link('Faça login para comentar', 'index.php?r=site/login', array('class' => 'btn btn-success')); 
+		}
+		?>
 	</div>
 
 <?php $this->endWidget(); ?>
