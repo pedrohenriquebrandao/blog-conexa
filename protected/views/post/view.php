@@ -32,7 +32,7 @@ $this->menu=array(
 		
 		<?php 
 			if(!Yii::app()->user->isGuest){
-				echo CHtml::link('Excluir','#', array('submit'=>array('post/delete','id'=>$model->post_id),'confirm'=>'Tem certeza que deseja exluir a publicação?', 'class' => 'btn btn-sm btn-danger')); 
+				echo CHtml::link('Excluir','#', array('submit'=>array('post/delete','id'=>$model->post_id),'confirm'=>'Tem certeza que deseja excluir a publicação?', 'class' => 'btn btn-sm btn-danger')); 
 			}
 		?>
 	</div>
