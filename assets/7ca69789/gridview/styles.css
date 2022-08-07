@@ -103,7 +103,7 @@
 .grid-view .summary
 {
 	margin: 0 0 5px 0;
-	text-align: right;
+	text-align: left;
 }
 
 .grid-view .pager

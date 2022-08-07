@@ -226,21 +226,30 @@ div.search-form
 	background: #80CFFF;
 }
 
-a:hover{
-	color: #F2803C !important;
-} 
-
 .btn-primary, .btn-primary:active, .btn-primary:visited{
     background-color: #F2803C !important;
 	border-color: #F2803C !important;
 }
 
 .btn-primary:hover {
-	background-color: #212529 !important;
-	border-color: #212529 !important;
+	background-color: #db6520 !important;
+	border-color: #db6520 !important;
+}
+
+.btn-info, .btn-info:active, .btn-info:visited{
+    background-color: #696d6c !important;
+	border-color: #696d6c !important;
+	color: #fff !important;
 }
 
 .btn-default:hover {
 	background-color: transparent !important;
 }
 
+.post-link {
+	color: #343a40;
+}
+
+.post-link:hover {
+    color:#F2803C
+}

@@ -37,8 +37,14 @@
 			<?php echo CHtml::link('<img src="../../images/conexa.png" alt="Logo">', 'index.php?r=post/index', array('class' => 'btn')); ?>
 		</div>
 		<div class="px-5 ms-auto mb-2 mb-lg-0">
-			<?php echo CHtml::link('Página Inicial', 'index.php?r=post/index', array('class' => 'btn btn-lg')); ?>
-			<?php echo CHtml::link('Publicar', 'index.php?r=post/create', array('class' => 'btn btn-lg btn-primary')); ?>
+			<?php echo CHtml::link('Página Inicial', 'index.php?r=post/index', array('class' => 'btn')); ?>
+			<?php 
+			if(Yii::app()->user->isGuest){
+				echo CHtml::link('<i class="fa fa-sign-in" aria-hidden="true"></i> Entrar', 'index.php?r=site/login', array('class' => 'btn btn-primary')); 
+			} else {
+				echo CHtml::link('<i class="fa fa-sign-out" aria-hidden="true"></i> Sair', 'index.php?r=site/logout', array('class' => 'btn btn-primary')); 
+			}
+			?>
 		</div>
 		
 		</div><!-- header -->

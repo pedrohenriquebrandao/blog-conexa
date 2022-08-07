@@ -21,20 +21,28 @@ $this->menu=array(
 
 <div class="row">
 	<div class="col-4">
-		<?php echo CHtml::link('<i class="fa fa-chevron-left" aria-hidden="true"></i> Voltar', 'index.php?r=post/index', array('class' => 'btn btn-outline-dark')); ?>
+		<?php echo CHtml::link('<i class="fa fa-chevron-left" aria-hidden="true"></i> Voltar', 'index.php?r=post/index', array('class' => 'btn btn-primary')); ?>
 	</div>
 	<div class="col-md-2 ms-auto">
-		<?php echo CHtml::link('Editar', 'index.php?r=post/update&id='.$model->post_id.'', array('class' => 'btn btn-sm btn-info')); ?>
+		<?php 
+			if(!Yii::app()->user->isGuest){
+				echo CHtml::link('Editar', 'index.php?r=post/update&id='.$model->post_id.'', array('class' => 'btn btn-sm btn-info')); 
+			}
+		?>
 		
 		<?php 
-			echo CHtml::link('Excluir','#', array('submit'=>array('post/delete','id'=>$model->post_id),'confirm'=>'Tem certeza que deseja exluir a publicação?', 'class' => 'btn btn-sm btn-danger')); 
+			if(!Yii::app()->user->isGuest){
+				echo CHtml::link('Excluir','#', array('submit'=>array('post/delete','id'=>$model->post_id),'confirm'=>'Tem certeza que deseja exluir a publicação?', 'class' => 'btn btn-sm btn-danger')); 
+			}
 		?>
 	</div>
 </div>
 <div class="text-center">
 	
-	<div class="h5 pb-4">
-		<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>	
+	<div class="h6 pb-4">
+		<span class="badge rounded-pill bg-primary">
+			<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>
+		</span>
 	</div>
 
 	<h1 class="pb-4">

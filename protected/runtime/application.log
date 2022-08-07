@@ -9487,3 +9487,36 @@ REQUEST_URI=/index.php?r=post/view&id=36
 in C:\blog-conexa\protected\views\post\view.php (30)
 in C:\blog-conexa\protected\controllers\PostController.php (57)
 in C:\blog-conexa\index.php (13)
+2022/08/07 04:35:50 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "login". in C:\Users\Pedro\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/login')
+#3 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/login
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/07 04:38:57 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "login". in C:\Users\Pedro\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/login')
+#3 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/login
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---
+2022/08/07 04:39:11 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "login". in C:\Users\Pedro\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Pedro\yii\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\Users\Pedro\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\Users\Pedro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/login')
+#3 C:\Users\Pedro\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/login
+HTTP_REFERER=http://localhost:8080/index.php?r=post/index
+---

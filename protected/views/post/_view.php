@@ -3,12 +3,12 @@
 /* @var $data Post */
 ?>
 
-<div class="mt-3">
+<div class="mt-4">
 	<div class="card-body">
 
-		<div class="h-">
+		<div class="h6">
 			<span class="badge rounded-pill bg-primary">
-				<?php echo CHtml::encode($data->getRelated('categoria_id')->assunto); ?>	
+				<?php echo CHtml::encode($data->getRelated('categoria_id')->assunto); ?>
 			</span>
 		</div>
 		<div class="pt-4" style="text-transform:capitalize">
@@ -21,9 +21,7 @@
 		<br />
 		<br />
 
-		<h1>
-			<?php echo CHtml::link($data->titulo, 'index.php?r=post/view&id='.$data->post_id.'', array('class' => 'card-title text-dark text-decoration-none')); ?>
-		</h1>
+		<?php echo CHtml::link($data->titulo, 'index.php?r=post/view&id='.$data->post_id.'', array('class' => 'card-title text-decoration-none post-link display-4')); ?>
 
 		<div class="h4 pt-4">
 			<?php

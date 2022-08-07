@@ -12,6 +12,9 @@ $this->menu=array(
 	
 );
 ?>
+<div>
+	<?php echo CHtml::link('<i class="fa fa-chevron-left" aria-hidden="true"></i> Voltar', 'index.php?r=post/view&id='.$model->post_id.'', array('class' => 'btn btn-primary')); ?>
+</div>
 
 <div class="pt-4">
   <h1 class="display-5">Editar publicação</h1>
