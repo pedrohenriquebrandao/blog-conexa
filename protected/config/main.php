@@ -9,7 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Blog Conexa',
 	'defaultController' => 'post',
-	'language' => 'pt-BR',
+	'language' => 'pt',
 
 	// preloading 'log' component
 	'preload'=>array('log'),

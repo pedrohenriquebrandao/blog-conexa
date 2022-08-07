@@ -129,7 +129,7 @@ class PostController extends Controller
 				'order'=>'post_id DESC',
 		   ),
 			'pagination' => array(
-				'pageSize' => 3
+				'pageSize' => 3,
 			) 
 		));
 
