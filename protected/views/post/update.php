@@ -5,17 +5,16 @@
 $this->breadcrumbs=array(
 	'Posts'=>array('index'),
 	$model->post_id=>array('view','id'=>$model->post_id),
-	'Update',
+	'Editar',
 );
 
 $this->menu=array(
-	array('label'=>'List Post', 'url'=>array('index')),
-	array('label'=>'Create Post', 'url'=>array('create')),
-	array('label'=>'View Post', 'url'=>array('view', 'id'=>$model->post_id)),
-	array('label'=>'Manage Post', 'url'=>array('admin')),
+	
 );
 ?>
 
-<h1>Update Post <?php echo $model->post_id; ?></h1>
+<div class="pt-4">
+  <h1 class="display-5">Editar publicação</h1>
+</div>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

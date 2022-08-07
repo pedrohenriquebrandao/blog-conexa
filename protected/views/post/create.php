@@ -8,8 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Listar posts', 'url'=>array('index')),
-	array('label'=>'Gerenciar posts', 'url'=>array('admin')),
+	
 );
 ?>
 

@@ -57,7 +57,7 @@
 	</div>
 
 	<div>
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Save', array('class' => 'btn btn-success')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Salvar', array('class' => 'btn btn-success')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

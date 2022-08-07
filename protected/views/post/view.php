@@ -9,12 +9,27 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Atualizar', 'url'=>array('update', 'id'=>$model->post_id)),
-	array('label'=>'Excluir', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->post_id),'confirm'=>'Tem certeza que deseja excluir essa publicação?')),
+	array(
+		'label'=>'Excluir', 
+		'url'=>'#', 
+		'linkOptions'=>array('submit'=>array('delete','id'=>$model->post_id),
+		'confirm'=>'Tem certeza que deseja excluir essa publicação?'),
+		)
 );
 ?>	
 
-<div class="ms-auto">
-	<?php echo CHtml::link('<i class="fa fa-chevron-left" aria-hidden="true"></i> Voltar', 'index.php?r=post/index', array('class' => 'btn btn-outline-dark')); ?>
+
+<div class="row">
+	<div class="col-4">
+		<?php echo CHtml::link('<i class="fa fa-chevron-left" aria-hidden="true"></i> Voltar', 'index.php?r=post/index', array('class' => 'btn btn-outline-dark')); ?>
+	</div>
+	<div class="col-md-2 ms-auto">
+		<?php echo CHtml::link('Editar', 'index.php?r=post/update&id='.$model->post_id.'', array('class' => 'btn btn-sm btn-info')); ?>
+		
+		<?php 
+			echo CHtml::link('Excluir','#', array('submit'=>array('post/delete','id'=>$model->post_id),'confirm'=>'Tem certeza que deseja exluir a publicação?', 'class' => 'btn btn-sm btn-danger')); 
+		?>
+	</div>
 </div>
 <div class="text-center">
 	

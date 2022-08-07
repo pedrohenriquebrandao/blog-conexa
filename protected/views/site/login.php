@@ -3,9 +3,9 @@
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - Login';
+$this->pageTitle=Yii::app()->name . ' - Entrar';
 $this->breadcrumbs=array(
-	'Login',
+	'Entrar',
 );
 ?>
 
@@ -21,7 +21,7 @@ $this->breadcrumbs=array(
 )); ?>
 
 	<div class="row">
-		<?php echo $form->textField($model,'username', array('class' => 'form-control', 'placeholder' => 'Email/Login')); ?>
+		<?php echo $form->textField($model,'username', array('class' => 'form-control', 'placeholder' => 'Usuário')); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
@@ -37,7 +37,7 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login', array('class' => 'btn btn-success')); ?>
+		<?php echo CHtml::submitButton('Entrar', array('class' => 'btn btn-success')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
