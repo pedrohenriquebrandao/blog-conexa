@@ -45,7 +45,6 @@
 			}
 			?>
 		</div>
-		
 		</div><!-- header -->
 
 		<!--<div id="mainmenu">

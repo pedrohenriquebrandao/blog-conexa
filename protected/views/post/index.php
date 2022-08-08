@@ -11,7 +11,6 @@ $this->menu=array(
 );
 
 ?>
-
 <div class="row">
 	<div class="col-6 mb-4">
 		<h1 class="display-5">Últimas publicações</h1>
