@@ -51,7 +51,8 @@ class PostController extends Controller
 	 */
 	public function actionView($id)
 	{ 
-		$comentarios = Post::model()->findByPK($id);
+		$comentarios=Post::model()->findByPK($id);
+		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 			'comentarios' => $comentarios->comentarios
@@ -154,7 +155,7 @@ class PostController extends Controller
 		if(isset($_GET['Post']))
 			$model->attributes=$_GET['Post'];
 
-		$this->render('_view',array(
+		$this->render('admin',array(
 			'model'=>$model,
 		));
 	}
