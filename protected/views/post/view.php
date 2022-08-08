@@ -18,7 +18,6 @@ $this->menu=array(
 );
 ?>	
 
-
 <div class="row">
 	<div class="col-4">
 		<?php echo CHtml::link('<i class="fa fa-chevron-left" aria-hidden="true"></i> Voltar', 'index.php?r=post/index', array('class' => 'btn btn-primary')); ?>
@@ -40,9 +39,26 @@ $this->menu=array(
 <div class="text-center">
 	
 	<div class="h5 pb-4">
-		<span class="badge bg-primary">
-			<?php echo CHtml::encode($model->getRelated('categoria_id')->assunto); ?>
-		</span>
+		<?php 
+			if($model->categoria_id == 1) {
+				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-integracoes text-white rounded-pill text-decoration-none'));
+			} 
+			if($model->categoria_id == 2) {
+				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-servicos text-white rounded-pill text-decoration-none'));
+			} 
+			if($model->categoria_id == 3) {
+				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-financeiro text-white rounded-pill text-decoration-none'));
+			} 
+			if($model->categoria_id == 4) {
+				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-agenda text-white rounded-pill text-decoration-none'));
+			} 
+			if($model->categoria_id == 5) {
+				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-parceiros text-white rounded-pill text-decoration-none'));
+			} 
+			if($model->categoria_id == 6){
+				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-outros text-white rounded-pill text-decoration-none'));
+			}
+		?>
 	</div>
 
 	<div class="pb-4 display-4">

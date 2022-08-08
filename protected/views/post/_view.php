@@ -7,9 +7,26 @@
 	<div class="card-body">
 
 		<div class="h5">
-			<span class="badge bg-primary">
-				<?php echo CHtml::encode($data->getRelated('categoria_id')->assunto); ?>
-			</span>
+		<?php 
+			if($data->categoria_id == 1) {
+				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-integracoes text-white rounded-pill text-decoration-none'));
+			} 
+			if($data->categoria_id == 2) {
+				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-servicos text-white rounded-pill text-decoration-none'));
+			} 
+			if($data->categoria_id == 3) {
+				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-financeiro text-white rounded-pill text-decoration-none'));
+			} 
+			if($data->categoria_id == 4) {
+				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-agenda text-white rounded-pill text-decoration-none'));
+			} 
+			if($data->categoria_id == 5) {
+				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-parceiros text-white rounded-pill text-decoration-none'));
+			} 
+			if($data->categoria_id == 6){
+				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-outros text-white rounded-pill text-decoration-none'));
+			}
+		?>
 		</div>
 		<div class="pt-4 pb-2" style="text-transform:capitalize">
 			<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($data->data_post))); ?>

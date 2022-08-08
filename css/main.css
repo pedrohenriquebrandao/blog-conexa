@@ -257,3 +257,27 @@ div.search-form
 .text-preview {
 	color: #696d6c;
 }
+
+.bg-integracoes{
+	background-color: #993b75;
+}
+
+.bg-servicos {
+	background-color: #dbdd71;
+}
+
+.bg-financeiro {
+	background-color: #97df7a;
+}
+
+.bg-agenda {
+	background-color: #4ea4b9;
+}
+
+.bg-parceiros {
+	background-color: #fa7c73;
+}
+
+.bg-outros {
+	background-color: #8c81bb;
+}

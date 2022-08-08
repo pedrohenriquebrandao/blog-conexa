@@ -28,7 +28,7 @@ class PostController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'filter'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -125,8 +125,8 @@ class PostController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Post', array(
-			'criteria'=>array(
-				'order'=>'post_id DESC',
+			'sort'=>array(
+				'defaultOrder'=>'post_id DESC',
 		   ),
 			'pagination' => array(
 				'pageSize' => 3,
@@ -185,5 +185,32 @@ class PostController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	
+	/**
+	 * Lists models by category.
+	 */
+	public function actionFilter($id)
+	{
+		$dataProvider=new CActiveDataProvider('Post', array(
+			'criteria'=>array(
+				'condition'=>'categoria_id = ' . $id,
+				'order'=>'post_id DESC',
+		   ),
+			'pagination' => array(
+				'pageSize' => 3,
+			) 
+		));
+
+		$model=new Post('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Post']))
+			$model->attributes=$_GET['Post'];
+
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+		));
 	}
 }
