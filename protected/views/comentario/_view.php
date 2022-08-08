@@ -26,4 +26,13 @@
 	<div class="pb-2" style="font-size: 18px;">
 		<?php echo CHtml::encode($data->texto); ?>
 	</div>
+
+	<div class="pb-2">
+		<div  class="d-inline">
+			<?php echo CHtml::ajaxLink('<i class="fa fa-thumbs-o-up text-dark" aria-hidden="true"></i>', array('comentario/curtida&id='.$data->comentario_id));?>
+		</div>
+		<div class="d-inline" id="curtidas">
+			<?php echo $data->curtidas ?>
+		</div>	
+	</div>
 </div>

@@ -61,6 +61,7 @@ class Comentario extends CActiveRecord
 			'data_comentario' => 'Data Comentario',
 			'texto' => 'Texto',
 			'post_id' => 'Post',
+			'curtidas' => 'Curtidas'
 		);
 	}
 
