@@ -42,10 +42,10 @@
 		<div class="pt-4 h3 text-preview">
 			<?php
 				$string = strip_tags($data->texto);
-				if (strlen($string) > 200) {
+				if (strlen($string) > 100) {
 				
 					// truncate string
-					$stringCut = substr($string, 0, 80);
+					$stringCut = substr($string, 0, 70);
 					$endPoint = strrpos($stringCut, ' ');
 				
 					//if the string doesn't contain any space then it will cut without word basis.
