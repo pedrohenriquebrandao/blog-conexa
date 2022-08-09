@@ -1,3 +1,10 @@
+CREATE TABLE IF NOT EXISTS usuarios (
+  usuario_id int(10) UNSIGNED AUTO_INCREMENT,
+  username varchar(255) NOT NULL,
+  senha varchar(255) NOT NULL,
+  PRIMARY KEY (usuario_id),
+);
+
 CREATE TABLE IF NOT EXISTS categorias (
   categoria_id int(10) UNSIGNED AUTO_INCREMENT,
   assunto varchar(191) NOT NULL,
@@ -13,6 +20,7 @@ CREATE TABLE IF NOT EXISTS posts (
   categoria_id int(10) UNSIGNED NOT NULL,
   PRIMARY KEY (post_id),
   FOREIGN KEY (categoria_id) REFERENCES categorias(categoria_id) ON UPDATE RESTRICT ON DELETE CASCADE
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id) ON UPDATE RESTRICT ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS comentarios (

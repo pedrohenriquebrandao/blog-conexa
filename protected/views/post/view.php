@@ -24,13 +24,13 @@ $this->menu=array(
 	</div>
 	<div class="col-md-2 ms-auto">
 		<?php 
-			if(!Yii::app()->user->isGuest){
+			if(Yii::app()->user->id == $model->usuario_id){
 				echo CHtml::link('Editar', 'index.php?r=post/update&id='.$model->post_id.'', array('class' => 'btn btn-sm btn-info')); 
 			}
 		?>
 		
 		<?php 
-			if(!Yii::app()->user->isGuest){
+			if(Yii::app()->user->id == $model->usuario_id){
 				echo CHtml::link('Excluir','#', array('submit'=>array('post/delete','id'=>$model->post_id),'confirm'=>'Tem certeza que deseja excluir a publicação?', 'class' => 'btn btn-sm btn-danger')); 
 			}
 		?>
@@ -41,22 +41,22 @@ $this->menu=array(
 	<div class="h5 pb-4">
 		<?php 
 			if($model->categoria_id == 1) {
-				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-integracoes text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-integracoes text-white rounded-pill text-decoration-none'));
 			} 
 			if($model->categoria_id == 2) {
-				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-servicos text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-servicos text-white rounded-pill text-decoration-none'));
 			} 
 			if($model->categoria_id == 3) {
-				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-financeiro text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-financeiro text-white rounded-pill text-decoration-none'));
 			} 
 			if($model->categoria_id == 4) {
-				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-agenda text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-agenda text-white rounded-pill text-decoration-none'));
 			} 
 			if($model->categoria_id == 5) {
-				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-parceiros text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-parceiros text-white rounded-pill text-decoration-none'));
 			} 
 			if($model->categoria_id == 6){
-				echo CHtml::link($model->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-outros text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-outros text-white rounded-pill text-decoration-none'));
 			}
 		?>
 	</div>

@@ -3,6 +3,14 @@
 /* @var $data Comentario */
 ?>
 <div class="card col-6 pt-2 px-2 mb-4" style="margin: 0 auto;">
+	<div>
+		<?php echo $data->getRelated('usuarios')->username ?>
+		<?php 
+			if(Yii::app()->user->id == $data->usuario_id){
+				echo CHtml::link('<i class="fa fa-trash-o" aria-hidden="true"></i> Excluir','#', array('submit'=>array('comentario/delete','id'=>$data->comentario_id),'confirm'=>'Tem certeza que deseja excluir este comentário?', 'class' => 'btn btn-sm btn-danger float-right')); 
+			}
+		?>
+	</div>
 	<div class="pb-4" style="font-size: 14px;color:rgb(104, 101, 101)">
 		<?php 
 			$now = time(); // or your date as well
@@ -28,9 +36,17 @@
 	</div>
 
 	<div class="pb-2">
-		<div  class="d-inline">
-			<?php echo CHtml::ajaxLink('<i class="fa fa-thumbs-o-up text-dark" aria-hidden="true"></i>', array('comentario/curtida&id='.$data->comentario_id));?>
+		<div class="d-inline">
+			<?php 
+			echo CHtml::ajaxLink('<i class="fa fa-heart-o text-dark" aria-hidden="true"></i>', 
+			array('comentario/curtida&id='.$data->comentario_id),
+			array(
+				
+			)
+			);
+			?>
 		</div>
+
 		<div class="d-inline" id="curtidas">
 			<?php echo $data->curtidas ?>
 		</div>	

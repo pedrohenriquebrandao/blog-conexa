@@ -281,3 +281,7 @@ div.search-form
 .bg-outros {
 	background-color: #8c81bb;
 }
+
+.float-right {
+	float: right;
+}

@@ -4,6 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 <hr>
+
 <div class="form col-lg-6 pt-4 pb-4" style="margin: 0 auto;">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -34,6 +35,11 @@
 		<?php echo $form->labelEx($model,'post_id'); ?>
 		<?php echo $form->textField($model,'post_id',array('size'=>10,'maxlength'=>10, 'class' => 'form-control')); ?>
 		<?php echo $form->error($model,'post_id'); ?>
+	</div>
+
+	<div style="display: none;">
+		<?php echo $form->textField($model,'usuario_id',array('size'=>10,'maxlength'=>10, 'class' => 'form-control', 'value'=>Yii::app()->user->id)); ?>
+		<?php echo $form->error($model,'usuario_id'); ?>
 	</div>
 
 	<div>

@@ -50,6 +50,12 @@
 		<?php echo $form->error($model,'categoria_id'); ?>
 	</div>
 
+	<div style="display:none;">
+		<?php echo $form->labelEx($model,'usuario_id'); ?>
+		<?php echo $form->textField($model,'usuario_id',array('size'=>60,'maxlength'=>255, 'class' => 'form-control', 'value'=>Yii::app()->user->id)); ?>
+		<?php echo $form->error($model,'usuario_id'); ?>
+	</div>
+
 	<div>
 		<?php echo $form->labelEx($model,'texto'); ?>
 		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>50, 'class' => 'form-control', 'placeholder' => 'Escreva seu texto...')); ?>

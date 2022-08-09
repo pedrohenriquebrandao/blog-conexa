@@ -9,22 +9,22 @@
 		<div class="h5">
 		<?php 
 			if($data->categoria_id == 1) {
-				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-integracoes text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($data->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-integracoes text-white rounded-pill text-decoration-none'));
 			} 
 			if($data->categoria_id == 2) {
-				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-servicos text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($data->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-servicos text-white rounded-pill text-decoration-none'));
 			} 
 			if($data->categoria_id == 3) {
-				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-financeiro text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($data->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-financeiro text-white rounded-pill text-decoration-none'));
 			} 
 			if($data->categoria_id == 4) {
-				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-agenda text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($data->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-agenda text-white rounded-pill text-decoration-none'));
 			} 
 			if($data->categoria_id == 5) {
-				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-parceiros text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($data->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-parceiros text-white rounded-pill text-decoration-none'));
 			} 
 			if($data->categoria_id == 6){
-				echo CHtml::link($data->getRelated('categoria_id')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-outros text-white rounded-pill text-decoration-none'));
+				echo CHtml::link($data->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$data->categoria_id.'', array('class' => 'badge bg-outros text-white rounded-pill text-decoration-none'));
 			}
 		?>
 		</div>

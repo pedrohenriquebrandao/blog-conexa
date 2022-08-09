@@ -33,6 +33,7 @@ class Comentario extends CActiveRecord
 			array('texto, post_id', 'required'),
 			array('texto', 'length', 'max'=>255),
 			array('post_id', 'length', 'max'=>10),
+			array('usuario_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('comentario_id, data_comentario, texto, post_id', 'safe', 'on'=>'search'),
@@ -47,7 +48,8 @@ class Comentario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'post_id' => array(self::BELONGS_TO, 'Posts', 'post_id'),
+			'posts' => array(self::BELONGS_TO, 'Post', 'post_id'),
+			'usuarios' => array(self::BELONGS_TO, 'Usuario', 'usuario_id'),
 		);
 	}
 

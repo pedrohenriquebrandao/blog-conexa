@@ -1,27 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "posts".
+ * This is the model class for table "usuarios".
  *
- * The followings are the available columns in table 'posts':
- * @property string $post_id
- * @property string $data_post
- * @property string $texto
- * @property string $autor
- * @property string $titulo
- * @property string $categoria_id
+ * The followings are the available columns in table 'usuarios':
+ * @property string $usuario_id
+ * @property string $username
+ * @property string $password
  *
  * The followings are the available model relations:
- * @property Categorias $categoria
+ * @property Posts[] $posts
  */
-class Post extends CActiveRecord
+class Usuario extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'posts';
+		return 'usuarios';
 	}
 
 	/**
@@ -32,14 +29,11 @@ class Post extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('autor, titulo, texto, categoria_id', 'required'),
-			array('autor, titulo', 'length', 'max'=>191),
-			array('categoria_id', 'length', 'max'=>10),
-			array('texto', 'length', 'max'=>10000),
-			array('usuario_id', 'length', 'max'=>10),
+			array('username, password', 'required'),
+			array('username, password', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('post_id, data_post, texto, autor, titulo, categoria_id', 'safe', 'on'=>'search'),
+			array('usuario_id, username, password', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,8 +45,8 @@ class Post extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'categorias' => array(self::BELONGS_TO, 'Categoria', 'categoria_id'),
-			'comentarios' => array(self::HAS_MANY, 'Comentario', 'post_id', 'order'=>'data_comentario DESC'),
+			'posts' => array(self::HAS_MANY, 'Posts', 'usuario_id'),
+			'comentarios' => array(self::HAS_MANY, 'Comentarios', 'usuario_id'),
 		);
 	}
 
@@ -62,12 +56,9 @@ class Post extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'post_id' => 'Post',
-			'data_post' => 'Data Post',
-			'texto' => 'Texto',
-			'autor' => 'Autor',
-			'titulo' => 'Titulo',
-			'categoria_id' => 'Categoria',
+			'usuario_id' => 'Usuario',
+			'username' => 'Username',
+			'password' => 'Senha',
 		);
 	}
 
@@ -89,12 +80,9 @@ class Post extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('post_id',$this->post_id,true);
-		$criteria->compare('data_post',$this->data_post,true);
-		$criteria->compare('texto',$this->texto,true);
-		$criteria->compare('autor',$this->autor,true);
-		$criteria->compare('titulo',$this->titulo,true);
-		$criteria->compare('categoria_id',$this->categoria_id,true);
+		$criteria->compare('usuario_id',$this->usuario_id,true);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('password',$this->password,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -105,7 +93,7 @@ class Post extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Post the static model class
+	 * @return Usuario the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

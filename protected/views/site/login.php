@@ -38,6 +38,7 @@ $this->breadcrumbs=array(
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Entrar', array('class' => 'btn btn-success')); ?>
+		<?php echo CHtml::link('Criar uma conta', 'index.php?r=usuario/create' , array('class' => 'btn btn-dark')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

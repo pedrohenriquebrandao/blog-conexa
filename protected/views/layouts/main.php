@@ -57,14 +57,21 @@
 			?>
 			
 		</div>
+		
 		<?php if(isset($this->breadcrumbs)):?>
 			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 				'links'=>$this->breadcrumbs,
 			)); ?>
 		<?php endif?> -->
-		
 	</div>
 	<div class="container">
+		<div class="container pt-4 text-end">
+		<?php
+			if(isset(Yii::app()->user->username)) {
+				echo 'Logado como:'.'<b>&nbsp;'.Yii::app()->user->username.'</b>';
+			}
+		?>
+		</div>
 		
 		<?php echo $content; ?>
 
