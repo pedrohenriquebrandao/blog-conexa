@@ -69,11 +69,17 @@ class UsuarioController extends Controller
 
 		if(isset($_POST['Usuario']))
 		{
-			$model->attributes=$_POST['Usuario'];
+			$model->setAttributes($_POST['Usuario']);
+			$passwordUncrypted = $model->password;
 			$model->password=crypt($model->password, 'salt');
 			
-			if($model->save())
-				$this->redirect(Yii::app()->user->returnUrl);
+			if($model->save()) {
+				$identity = new UserIdentity($model->username, $passwordUncrypted);
+				if($identity->authenticate()){
+					Yii::app()->user->login($identity);  
+					$this->redirect('index.php?r=post/index');     
+				}
+			}
 		}
 
 		$this->render('create',array(
