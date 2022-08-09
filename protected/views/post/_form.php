@@ -32,32 +32,27 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div>
-		<?php echo $form->labelEx($model,'autor'); ?>
-		<?php echo $form->textField($model,'autor',array('size'=>60,'maxlength'=>255, 'class' => 'form-control')); ?>
+		<?php echo $form->textField($model,'autor',array('size'=>60,'maxlength'=>255, 'class' => 'form-control', 'placeholder' => 'Autor')); ?>
 		<?php echo $form->error($model,'autor'); ?>
 	</div>
 
 	<div>
-		<?php echo $form->labelEx($model,'titulo'); ?>
-		<?php echo $form->textField($model,'titulo',array('size'=>60,'maxlength'=>255, 'class' => 'form-control')); ?>
+		<?php echo $form->textField($model,'titulo',array('size'=>60,'maxlength'=>255, 'class' => 'form-control', 'placeholder' => 'Título')); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 	</div>
 
 	<div>
-		<?php echo $form->labelEx($model,'categoria_id'); ?>
 		<?php $opts = CHtml::listData(Categoria::model()->findAll(),'categoria_id','assunto'); ?>
-		<?php echo $form->dropDownList($model, 'categoria_id', $opts, array('class' => 'form-select')) ?>
+		<?php echo $form->dropDownList($model, 'categoria_id', $opts, array('class' => 'form-select', 'empty'=>'Selecione uma categoria')) ?>
 		<?php echo $form->error($model,'categoria_id'); ?>
 	</div>
 
 	<div style="display:none;">
-		<?php echo $form->labelEx($model,'usuario_id'); ?>
 		<?php echo $form->textField($model,'usuario_id',array('size'=>60,'maxlength'=>255, 'class' => 'form-control', 'value'=>Yii::app()->user->id)); ?>
 		<?php echo $form->error($model,'usuario_id'); ?>
 	</div>
 
 	<div>
-		<?php echo $form->labelEx($model,'texto'); ?>
 		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>50, 'class' => 'form-control', 'placeholder' => 'Escreva seu texto...')); ?>
 		<?php echo $form->error($model,'texto'); ?>
 	</div>
