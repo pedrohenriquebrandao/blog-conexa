@@ -34,6 +34,7 @@ class Usuario extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('usuario_id, username, password', 'safe', 'on'=>'search'),
+			array('username', 'unique', 'on' => 'insert,update', 'message' => 'Nome de usuário já está em uso!'),
 		);
 	}
 

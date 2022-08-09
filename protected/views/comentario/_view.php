@@ -38,11 +38,15 @@
 	<div class="pb-2">
 		<div class="d-inline">
 			<?php 
-			echo CHtml::ajaxLink('<i class="fa fa-heart-o text-dark" aria-hidden="true"></i>', 
-			array('comentario/curtida&id='.$data->comentario_id),
-			array(
-				
-			));
+			if(!Yii::app()->user->isGuest) {
+				echo CHtml::ajaxLink('<i class="fa fa-heart-o text-dark" aria-hidden="true"></i>', 
+				array('comentario/curtida&id='.$data->comentario_id),
+				array(
+					'update' => 'curtidas'
+				));
+			} else {
+				echo CHtml::link('<i class="fa fa-heart-o text-dark" aria-hidden="true"></i>', 'index.php?r=site/login'); 
+			}
 			?>
 		</div>
 
