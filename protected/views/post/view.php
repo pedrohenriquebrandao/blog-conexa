@@ -25,13 +25,13 @@ $this->menu=array(
 	<div class="col-md-2 ms-auto">
 		<?php 
 			if(Yii::app()->user->id == $model->usuario_id){
-				echo CHtml::link('Editar', 'index.php?r=post/update&id='.$model->post_id.'', array('class' => 'btn btn-sm btn-info')); 
+				echo CHtml::link('<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar', 'index.php?r=post/update&id='.$model->post_id.'', array('class' => 'btn btn-sm btn-info')); 
 			}
 		?>
 		
 		<?php 
 			if(Yii::app()->user->id == $model->usuario_id){
-				echo CHtml::link('Excluir','#', array('submit'=>array('post/delete','id'=>$model->post_id),'confirm'=>'Tem certeza que deseja excluir a publicação?', 'class' => 'btn btn-sm btn-danger')); 
+				echo CHtml::link('<i class="fa fa-trash-o" aria-hidden="true"></i> Excluir','#', array('submit'=>array('post/delete','id'=>$model->post_id),'confirm'=>'Tem certeza que deseja excluir a publicação?', 'class' => 'btn btn-sm btn-danger')); 
 			}
 		?>
 	</div>

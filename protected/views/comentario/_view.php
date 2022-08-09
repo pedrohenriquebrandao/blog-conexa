@@ -42,8 +42,7 @@
 			array('comentario/curtida&id='.$data->comentario_id),
 			array(
 				
-			)
-			);
+			));
 			?>
 		</div>
 

@@ -65,14 +65,6 @@
 		<?php endif?> -->
 	</div>
 	<div class="container">
-		<div class="d-flex justify-content-end h5">
-			<?php
-				if(isset(Yii::app()->user->username)) {
-					echo '<div class="mt-4 badge border border-primary text-primary">Logado como:'.'<b>&nbsp;'.Yii::app()->user->username.'</b></div>';
-				}
-			?>
-		</div>
-		
 		<?php echo $content; ?>
 
 		<div class="clear"></div>

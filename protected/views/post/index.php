@@ -18,7 +18,7 @@ $this->menu=array(
 	<div class="col-md-2 ms-auto">
 	<?php 
 		if(!Yii::app()->user->isGuest){
-			echo CHtml::link('<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Publicar', 'index.php?r=post/create', array('class' => 'btn btn-lg btn-success')); 
+			echo CHtml::link('<i class="fa fa-pencil" aria-hidden="true"></i> Publicar', 'index.php?r=post/create', array('class' => 'btn btn-lg btn-success')); 
 		}
 	?>
 	</div>
