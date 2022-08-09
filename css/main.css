@@ -259,15 +259,15 @@ div.search-form
 }
 
 .bg-integracoes{
-	background-color: #993b75;
+	background-color: #813464;
 }
 
 .bg-servicos {
-	background-color: #dbdd71;
+	background-color: #b64334;
 }
 
 .bg-financeiro {
-	background-color: #97df7a;
+	background-color: #6fa35b;
 }
 
 .bg-agenda {
@@ -275,11 +275,11 @@ div.search-form
 }
 
 .bg-parceiros {
-	background-color: #fa7c73;
+	background-color: #857438;
 }
 
 .bg-outros {
-	background-color: #8c81bb;
+	background-color: #f04ea4;
 }
 
 .float-right {
