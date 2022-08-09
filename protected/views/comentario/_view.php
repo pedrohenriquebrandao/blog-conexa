@@ -42,7 +42,7 @@
 				echo CHtml::ajaxLink('<i class="fa fa-heart-o text-dark" aria-hidden="true"></i>', 
 				array('comentario/curtida&id='.$data->comentario_id),
 				array(
-					'update' => 'curtidas'
+					
 				));
 			} else {
 				echo CHtml::link('<i class="fa fa-heart-o text-dark" aria-hidden="true"></i>', 'index.php?r=site/login'); 
