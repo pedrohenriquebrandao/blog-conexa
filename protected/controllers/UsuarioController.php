@@ -73,7 +73,7 @@ class UsuarioController extends Controller
 			$model->password=crypt($model->password, 'salt');
 			
 			if($model->save())
-				$this->redirect('index.php?r=site/login');
+				$this->redirect(Yii::app()->user->returnUrl);
 		}
 
 		$this->render('create',array(

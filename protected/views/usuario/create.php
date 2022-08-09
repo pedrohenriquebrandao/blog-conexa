@@ -2,6 +2,8 @@
 /* @var $this UsuarioController */
 /* @var $model Usuario */
 
+$this->pageTitle=Yii::app()->name . ' - Cadastro';
+
 $this->breadcrumbs=array(
 	'Usuarios'=>array('index'),
 	'Create',

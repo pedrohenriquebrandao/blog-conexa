@@ -39,10 +39,10 @@
 		<div class="d-inline">
 			<?php 
 			if(!Yii::app()->user->isGuest) {
-				echo CHtml::ajaxLink('<i class="fa fa-heart-o text-dark" aria-hidden="true"></i>', 
+				echo CHtml::ajaxLink('<i class="fa fa-heart text-danger" aria-hidden="true"></i>', 
 				array('comentario/curtida&id='.$data->comentario_id),
 				array(
-					
+					'onclick' => 'asd'
 				));
 			} else {
 				echo CHtml::link('<i class="fa fa-heart-o text-dark" aria-hidden="true"></i>', 'index.php?r=site/login'); 

@@ -26,7 +26,7 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row">
-		<?php echo $form->passwordField($model,'password', array('class' => 'form-control', 'placeholder' => 'Senha')); ?>
+		<?php echo $form->passwordField($model,'password', array('class' => 'form-control', 'placeholder' => 'Senha', 'value'=>'')); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 

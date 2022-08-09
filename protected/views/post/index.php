@@ -2,6 +2,8 @@
 /* @var $this PostController */
 /* @var $dataProvider CActiveDataProvider */
 
+$this->pageTitle=Yii::app()->name . ' - Início';
+
 $this->breadcrumbs=array(
 	'Últimas Publicações',
 );

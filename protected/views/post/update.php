@@ -2,6 +2,8 @@
 /* @var $this PostController */
 /* @var $model Post */
 
+$this->pageTitle=Yii::app()->name . ' - Editar publicação';
+
 $this->breadcrumbs=array(
 	'Posts'=>array('index'),
 	$model->post_id=>array('view','id'=>$model->post_id),

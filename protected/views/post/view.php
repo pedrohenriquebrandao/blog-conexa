@@ -2,6 +2,8 @@
 /* @var $this PostController */
 /* @var $model Post */
 
+$this->pageTitle=Yii::app()->name . ' - ' . $model->titulo;
+
 $this->breadcrumbs=array(
 	'Últimas Publicações'=>array('index'),
 	$model->post_id,
