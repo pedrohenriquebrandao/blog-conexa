@@ -84,7 +84,7 @@ $this->menu=array(
 	<div class="pb-2">
 		<div class="d-inline">
 			<?php 
-				echo CHtml::ajaxLink('<i class="fa fa-heart text-curtida btn btn-danger" aria-hidden="true"></i>', 
+				echo CHtml::ajaxLink('<i class="fa fa-heart btn btn-danger" aria-hidden="true"></i>', 
 				array('post/curtida&id='.$model->post_id),
 				array(
 					'update' => '#curtidas',

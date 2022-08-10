@@ -7,7 +7,7 @@
 		<?php echo $data->getRelated('usuarios')->username ?>
 		<?php 
 			if(Yii::app()->user->id == $data->usuario_id){
-				echo CHtml::link('<i class="container fa fa-trash-o" aria-hidden="true"></i>','#', array('submit'=>array('comentario/delete','id'=>$data->comentario_id),'confirm'=>'Tem certeza que deseja excluir este comentário?', 'class' => 'h4 text-danger float-right')); 
+				echo CHtml::link('<i id="excluir-comentario" class="container fa fa-trash-o" aria-hidden="true"></i>','#', array('submit'=>array('comentario/delete','id'=>$data->comentario_id),'confirm'=>'Tem certeza que deseja excluir este comentário?', 'class' => 'badge border bg-danger border-danger float-right')); 
 			}
 		?>
 	</div>

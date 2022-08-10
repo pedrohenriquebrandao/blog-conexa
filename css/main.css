@@ -286,6 +286,6 @@ div.search-form
 	float: right;
 }
 
-.text-curtida {
-	color:#fc4040;
+#excluir-comentario {
+	color: #fff !important;
 }
