@@ -13,21 +13,17 @@
 	</div>
 	<div class="pb-4" style="font-size: 14px;color:rgb(104, 101, 101)">
 		<?php 
-			$now = time(); // or your date as well
-			$comentario = strtotime($data->data_comentario);
-			$diff = $now - $comentario;
+			$comentario = new DateTime($data->data_comentario);
+			$now = new DateTime();
 			
-			$anos = floor($diff / (365*60*60*24));
-			$meses = floor(($diff - $anos * 365*60*60*24) / (30*60*60*24));
-			$dias = floor(($diff - $anos * 365*60*60*24 - $meses*30*60*60*24)/ (60*60*24));
-
-			if($dias < 1)
-				echo 'Hoje';
-			else if($dias == 1) {
-				echo $dias . ' dia atrás';
-			} else {
-				echo $dias . ' dias atrás';
-			}
+			$resultado = $comentario->diff($now);
+			
+			if($resultado->format('%d') == 0)
+				print_r($resultado->format('Hoje'));
+			else if ($resultado->format('%d') == 1)
+				print_r($resultado->format('Há %d dia'));
+			else if ($resultado->format('%d') > 1 && $resultado->format('%d') <= 30)
+				print_r($resultado->format('Há %d dias'));
 		?>
 	</div>
 
