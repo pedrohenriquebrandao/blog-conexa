@@ -32,7 +32,7 @@ class PostController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','delete'),
+				'actions'=>array('create','update','delete','curtida'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -213,5 +213,17 @@ class PostController extends Controller
 			'dataProvider'=>$dataProvider,
 			'model'=>$model,
 		));
+	}
+
+	/**
+	 * Increments likes.
+	 * @param integer $id the ID of the comment
+	 */
+	public function actionCurtida($id)
+	{
+		$post=Post::model()->findByPk($id);
+		$post->curtidas+=1;
+		$post->save();
+		echo $post->curtidas;
 	}
 }

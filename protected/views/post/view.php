@@ -38,48 +38,65 @@ $this->menu=array(
 		?>
 	</div>
 </div>
-<div class="text-center">
+<div>
+	<div class="text-center">
+		<div class="h5 pb-4">
+			<?php 
+				if($model->categoria_id == 1) {
+					echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-integracoes text-white rounded-pill text-decoration-none'));
+				} 
+				if($model->categoria_id == 2) {
+					echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-servicos text-white rounded-pill text-decoration-none'));
+				} 
+				if($model->categoria_id == 3) {
+					echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-financeiro text-white rounded-pill text-decoration-none'));
+				} 
+				if($model->categoria_id == 4) {
+					echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-agenda text-white rounded-pill text-decoration-none'));
+				} 
+				if($model->categoria_id == 5) {
+					echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-parceiros text-white rounded-pill text-decoration-none'));
+				} 
+				if($model->categoria_id == 6){
+					echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-outros text-white rounded-pill text-decoration-none'));
+				}
+			?>
+		</div>
+
+		<div class="pb-4 display-4">
+			<?php echo CHtml::encode($model->titulo); ?>
+		</div>
+
+		<i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+		<div class="h5 pt-2">
+			<i><?php echo CHtml::encode($model->autor); ?> </i> 
+		</div>
+
+		<div class="pb-4" style="text-transform:capitalize">
+			<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($model->data_post))); ?>
+		</div>
+		<hr class="mb-4">
+	</div>
 	
-	<div class="h5 pb-4">
-		<?php 
-			if($model->categoria_id == 1) {
-				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-integracoes text-white rounded-pill text-decoration-none'));
-			} 
-			if($model->categoria_id == 2) {
-				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-servicos text-white rounded-pill text-decoration-none'));
-			} 
-			if($model->categoria_id == 3) {
-				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-financeiro text-white rounded-pill text-decoration-none'));
-			} 
-			if($model->categoria_id == 4) {
-				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-agenda text-white rounded-pill text-decoration-none'));
-			} 
-			if($model->categoria_id == 5) {
-				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-parceiros text-white rounded-pill text-decoration-none'));
-			} 
-			if($model->categoria_id == 6){
-				echo CHtml::link($model->getRelated('categorias')->assunto, 'index.php?r=post/filter&id='.$model->categoria_id.'', array('class' => 'badge bg-outros text-white rounded-pill text-decoration-none'));
-			}
-		?>
+	<div>
+		<?php echo $model->texto; ?>
 	</div>
+	<div class="pb-2">
+		<div class="d-inline">
+			<?php 
+				echo CHtml::ajaxLink('<i class="fa fa-heart text-curtida btn btn-danger" aria-hidden="true"></i>', 
+				array('post/curtida&id='.$model->post_id),
+				array(
+					'update' => '#curtidas',
+					)
+				);
+			?>
+		</div>
 
-	<div class="pb-4 display-4">
-		<?php echo CHtml::encode($model->titulo); ?>
+		<div class="d-inline badge bg-secondary" id="curtidas">
+			<?php echo $model->curtidas ?>
+		</div>	
 	</div>
-
-	<i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
-	<div class="h5 pt-2">
-		<i><?php echo CHtml::encode($model->autor); ?> </i> 
-	</div>
-
-	<div class="pb-4" style="text-transform:capitalize">
-		<?php echo CHtml::encode(Yii::app()->dateFormatter->format("MMM d, yyyy", strtotime($model->data_post))); ?>
-	</div>
-	
-	<div class="h4">
-		<?php echo CHtml::encode($model->texto); ?>
-	</div>
-	<br />
 </div>
 
 <div>

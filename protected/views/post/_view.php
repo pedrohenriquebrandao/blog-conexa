@@ -45,7 +45,7 @@
 				if (strlen($string) > 100) {
 				
 					// truncate string
-					$stringCut = substr($string, 0, 70);
+					$stringCut = substr($string, 0, 100);
 					$endPoint = strrpos($stringCut, ' ');
 				
 					//if the string doesn't contain any space then it will cut without word basis.
@@ -53,7 +53,7 @@
 					$string .= '...';
 				}
 
-				echo CHtml::encode($string, array('class' => 'card-text')); 
+				echo $string; 
 			?>
 		</div>
 	</div>
