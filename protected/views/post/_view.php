@@ -45,7 +45,7 @@
 				if (strlen($string) > 100) {
 				
 					// truncate string
-					$stringCut = substr($string, 0, 100);
+					$stringCut = substr($string, 0, 80);
 					$endPoint = strrpos($stringCut, ' ');
 				
 					//if the string doesn't contain any space then it will cut without word basis.
