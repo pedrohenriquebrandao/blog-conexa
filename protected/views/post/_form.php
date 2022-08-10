@@ -53,14 +53,18 @@
 	</div>
 
 	<div>
-		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>50, 'class' => 'form-control', 'placeholder' => 'Escreva seu texto...')); ?>
+		<?php echo $form->textArea($model,'texto',array('rows'=>6, 'cols'=>50, 'id' => 'ckplot', 'class' => 'form-control')); ?>
 		<?php echo $form->error($model,'texto'); ?>
 	</div>
 
 	<div>
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Salvar', array('class' => 'btn btn-success')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Salvar', array('class' => 'btn btn-success mt-4')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+<script>
+	CKEDITOR.replace("ckplot");
+</script>
