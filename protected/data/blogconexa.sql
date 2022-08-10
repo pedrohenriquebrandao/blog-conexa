@@ -30,9 +30,11 @@ CREATE TABLE IF NOT EXISTS comentarios (
   data_comentario timestamp DEFAULT CURRENT_TIMESTAMP,
   texto varchar(255) NOT NULL,
   post_id int(10) UNSIGNED NOT NULL,
+  usuario_id int(10) UNSIGNED NOT NULL,
   curtidas int(10) UNSIGNED DEFAULT 0,
   PRIMARY KEY (comentario_id),
   FOREIGN KEY (post_id) REFERENCES posts(post_id) ON UPDATE RESTRICT ON DELETE CASCADE
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id) ON UPDATE RESTRICT ON DELETE CASCADE
 );
 
 INSERT INTO categorias (assunto) VALUES ('Integrações');
