@@ -32,7 +32,7 @@ class ComentarioController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update', 'curtida'),
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -170,17 +170,5 @@ class ComentarioController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-	}
-
-	/**
-	 * Increments likes.
-	 * @param integer $id the ID of the comment
-	 */
-	public function actionCurtida($id)
-	{
-		$comentario=Comentario::model()->findByPk($id);
-		$comentario->curtidas+=1;
-		$comentario->save();
-		echo $comentario->curtidas;
 	}
 }
