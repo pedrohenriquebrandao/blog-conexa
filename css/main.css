@@ -286,6 +286,10 @@ div.search-form
 	float: right;
 }
 
-#excluir-comentario {
-	color: #fff !important;
+.excluir-comentario {
+	color: rgb(255, 255, 255) !important;
+}
+
+.excluir-comentario:hover {
+	color: rgb(255, 195, 200) !important;
 }
