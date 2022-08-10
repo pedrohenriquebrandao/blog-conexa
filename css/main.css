@@ -285,3 +285,8 @@ div.search-form
 .float-right {
 	float: right;
 }
+
+.text-curtida {
+	color:#ff0000;
+	font-size: 16px;
+}

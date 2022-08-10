@@ -178,10 +178,10 @@ class ComentarioController extends Controller
 	 */
 	public function actionCurtida($id)
 	{
-		if(Yii::app()->request->isAjaxRequest){
-			$comentarios=Comentario::model()->findByPk($id);
-			$comentarios->curtidas+=1;
-			$comentarios->save();
-        }
+		
+		$comentarios=Comentario::model()->findByPk($id);
+		$comentarios->curtidas+=1;
+		$comentarios->save();
+		echo $comentarios->curtidas;
 	}
 }

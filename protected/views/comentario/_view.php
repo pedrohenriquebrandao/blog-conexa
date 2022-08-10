@@ -2,7 +2,7 @@
 /* @var $this ComentarioController */
 /* @var $data Comentario */
 ?>
-<div class="card col-6 pt-2 px-2 mb-4" style="margin: 0 auto;">
+<div class="card col-6 pt-2 px-2 mb-4 bg-light" style="margin: 0 auto;">
 	<div>
 		<?php echo $data->getRelated('usuarios')->username ?>
 		<?php 
@@ -38,15 +38,12 @@
 	<div class="pb-2">
 		<div class="d-inline">
 			<?php 
-			if(!Yii::app()->user->isGuest) {
-				echo CHtml::ajaxLink('<i class="fa fa-heart text-danger" aria-hidden="true"></i>', 
+				echo CHtml::ajaxLink('<i class="fa fa-heart text-curtida" aria-hidden="true"></i>', 
 				array('comentario/curtida&id='.$data->comentario_id),
 				array(
-					
-				));
-			} else {
-				echo CHtml::link('<i class="fa fa-heart-o text-dark" aria-hidden="true"></i>', 'index.php?r=site/login'); 
-			}
+					'update' => '#curtidas',
+					)
+				);
 			?>
 		</div>
 
@@ -55,3 +52,7 @@
 		</div>	
 	</div>
 </div>
+
+<script>
+	
+</script>
