@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS comentarios (
   post_id int(10) UNSIGNED NOT NULL,
   usuario_id int(10) UNSIGNED NOT NULL,
   PRIMARY KEY (comentario_id),
-  FOREIGN KEY (post_id) REFERENCES posts(post_id) ON UPDATE RESTRICT ON DELETE CASCADE
+  FOREIGN KEY (post_id) REFERENCES posts(post_id) ON UPDATE RESTRICT ON DELETE CASCADE,
   FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id) ON UPDATE RESTRICT ON DELETE CASCADE
 );
 
