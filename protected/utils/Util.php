@@ -34,6 +34,6 @@ class Util {
 
         $diffStr = implode(' | ', $diffArr);
 
-        return ($diffStr == '' ? '0' : $diffStr) . PHP_EOL;
+        return ($diffStr == '' ? 'Agora' : $diffStr) . PHP_EOL;
     }
 }
