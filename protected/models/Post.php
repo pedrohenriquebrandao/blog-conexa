@@ -53,6 +53,7 @@ class Post extends CActiveRecord
 		return array(
 			'categorias' => array(self::BELONGS_TO, 'Categoria', 'categoria_id'),
 			'comentarios' => array(self::HAS_MANY, 'Comentario', 'post_id', 'order'=>'data_comentario DESC'),
+			'usuarios' => array(self::BELONGS_TO, 'Usuario', 'usuario_id'),
 		);
 	}
 

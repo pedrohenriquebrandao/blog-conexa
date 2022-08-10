@@ -19,6 +19,11 @@
 		<p class="note">Campos com <span class="required">*</span> são obrigatórios.</p>
 
 		<div class="row">
+			<?php echo $form->textField($model,'nome',array('size'=>60,'maxlength'=>255, 'class' => 'form-control', 'placeholder' => 'Nome')); ?>
+			<?php echo $form->error($model,'nome'); ?>
+		</div>
+
+		<div class="row">
 			<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>255, 'class' => 'form-control', 'placeholder' => 'Usuário')); ?>
 			<?php echo $form->error($model,'username'); ?>
 		</div>

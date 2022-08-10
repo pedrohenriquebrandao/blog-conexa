@@ -29,11 +29,11 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password', 'required'),
-			array('username, password', 'length', 'max'=>255),
+			array('username, nome, password', 'required'),
+			array('username, nome, password', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('usuario_id, username, password', 'safe', 'on'=>'search'),
+			array('usuario_id, nome, username, password', 'safe', 'on'=>'search'),
 			array('username', 'unique', 'on' => 'insert,update', 'message' => 'Nome de usuário já está em uso!'),
 		);
 	}
@@ -58,6 +58,7 @@ class Usuario extends CActiveRecord
 	{
 		return array(
 			'usuario_id' => 'Usuario',
+			'nome' => 'Nome',
 			'username' => 'Username',
 			'password' => 'Senha',
 		);
@@ -82,6 +83,7 @@ class Usuario extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('usuario_id',$this->usuario_id,true);
+		$criteria->compare('nome',$this->username,true);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
 

@@ -7,7 +7,7 @@
  */
 class UserIdentity extends CUserIdentity
 {
-	private $_id;
+	private $_id, $_nome;
 
 	/**
 	 * Authenticates a user.
@@ -28,6 +28,8 @@ class UserIdentity extends CUserIdentity
 		else {
 			$this->_id=$user->usuario_id;
 			$this->setState('username', $user->username);
+			$this->_nome=$user->nome;
+        	$this->setState('nome', $user->nome);
 			$this->errorCode=self::ERROR_NONE;
 		}
 		return !$this->errorCode;
@@ -36,5 +38,10 @@ class UserIdentity extends CUserIdentity
 	public function getId() 
 	{
 		return $this->_id;
+	}
+
+	public function getNome() 
+	{
+		return $this->_nome;
 	}
 }

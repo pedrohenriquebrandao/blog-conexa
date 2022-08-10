@@ -50,7 +50,7 @@
 		<div class="mt-2 container text-end">
 		<?php
 			if(isset(Yii::app()->user->username)) {
-				echo '<i class="fa fa-user-o" aria-hidden="true"></i> '.Yii::app()->user->username.'</b>';
+				echo '<i class="fa fa-user-o" aria-hidden="true"></i> '.Yii::app()->user->username .'</b>';
 			}
 		?>
 		</div>

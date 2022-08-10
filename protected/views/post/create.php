@@ -2,6 +2,8 @@
 /* @var $this PostController */
 /* @var $model Post */
 
+$this->pageTitle=Yii::app()->name . ' - Criar publicação';
+
 $this->breadcrumbs=array(
 	'Posts'=>array('index'),
 	'Fazer um post',

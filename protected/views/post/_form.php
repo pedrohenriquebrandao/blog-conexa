@@ -31,8 +31,8 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div>
-		<?php echo $form->textField($model,'autor',array('size'=>60,'maxlength'=>255, 'class' => 'form-control', 'placeholder' => 'Autor')); ?>
+	<div style="display: none;">
+		<?php echo $form->textField($model,'autor',array('size'=>10,'maxlength'=>10, 'class' => 'form-control', 'value'=>Yii::app()->user->nome)); ?>
 		<?php echo $form->error($model,'autor'); ?>
 	</div>
 
