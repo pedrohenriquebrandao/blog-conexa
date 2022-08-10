@@ -9,6 +9,8 @@ Este projeto foi desenvolvido como parte do onboarding do programa de estágio d
 - [MySQL 5.7](https://dev.mysql.com/downloads/mysql/5.7.html)
 - [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 - [Font Awesome 4.7](https://fontawesome.com/v4/icons/)
+- [CKEditor 4.14](https://ckeditor.com/ckeditor-4/)
+
 
 
 
