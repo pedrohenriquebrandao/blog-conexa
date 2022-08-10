@@ -13,17 +13,32 @@
 	</div>
 	<div class="pb-4" style="font-size: 14px;color:rgb(104, 101, 101)">
 		<?php 
+			$diffs = [
+				'anos' => 'y',
+				'meses' => 'm',
+				'dias' => 'd',
+				'horas' => 'h',
+				'minutos' => 'i',
+				'segundos' => 's'
+			];
+
 			$comentario = new DateTime($data->data_comentario);
 			$now = new DateTime();
 			
 			$resultado = $comentario->diff($now);
+
+			$diffArr = [];
+
+			foreach ($diffs as $k => $v) {
+				$d = $resultado->format('%' . $v);
+				if ($d > 0) {
+					$diffArr[] = $d . ' ' . $k;
+				}
+			}    
+			$diffStr = implode(' | ', $diffArr);
+			echo ($diffStr == '' ? '0' : $diffStr) . PHP_EOL;
 			
-			if($resultado->format('%d') == 0)
-				print_r($resultado->format('Hoje'));
-			else if ($resultado->format('%d') == 1)
-				print_r($resultado->format('Há %d dia'));
-			else if ($resultado->format('%d') > 1 && $resultado->format('%d') <= 30)
-				print_r($resultado->format('Há %d dias'));
+			// print_r($resultado->format('%y anos %m meses %d dias %h horas %i minutos'));
 		?>
 	</div>
 
