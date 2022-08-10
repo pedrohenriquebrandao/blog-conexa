@@ -20,4 +20,18 @@ class Controller extends CController
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
+
+	public function filterAccessControl($filterChain){
+		
+		try {
+			$filter=new CAccessControlFilter;
+			$filter->setRules($this->accessRules());
+			$filter->filter($filterChain);
+		} catch(Exception $e) {
+			if($e->statusCode == 403) {
+				$this->redirect('index.php?r=post/index');
+			}
+		
+		}
+	}
 }
