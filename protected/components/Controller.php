@@ -21,17 +21,17 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
-	public function filterAccessControl($filterChain){
+	// public function filterAccessControl($filterChain){
 		
-		try {
-			$filter=new CAccessControlFilter;
-			$filter->setRules($this->accessRules());
-			$filter->filter($filterChain);
-		} catch(Exception $e) {
-			if($e->statusCode == 403) {
-				$this->redirect('index.php?r=post/index');
-			}
+	// 	try {
+	// 		$filter=new CAccessControlFilter;
+	// 		$filter->setRules($this->accessRules());
+	// 		$filter->filter($filterChain);
+	// 	} catch(Exception $e) {
+	// 		if($e->statusCode == 403) {
+	// 			$this->redirect('index.php?r=post/index');
+	// 		}
 		
-		}
-	}
+	// 	}
+	// }
 }
