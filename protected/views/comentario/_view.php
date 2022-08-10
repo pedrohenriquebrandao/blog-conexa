@@ -41,13 +41,13 @@
 				echo CHtml::ajaxLink('<i class="fa fa-heart text-curtida" aria-hidden="true"></i>', 
 				array('comentario/curtida&id='.$data->comentario_id),
 				array(
-					'update' => '#curtidas',
+					'update' => '#curtidasComentarios',
 					)
 				);
 			?>
 		</div>
 
-		<div class="d-inline" id="curtidas">
+		<div class="d-inline" id="curtidasComentarios">
 			<?php echo $data->curtidas ?>
 		</div>	
 	</div>

@@ -178,10 +178,9 @@ class ComentarioController extends Controller
 	 */
 	public function actionCurtida($id)
 	{
-		
-		$comentarios=Comentario::model()->findByPk($id);
-		$comentarios->curtidas+=1;
-		$comentarios->save();
-		echo $comentarios->curtidas;
+		$comentario=Comentario::model()->findByPk($id);
+		$comentario->curtidas+=1;
+		$comentario->save();
+		echo $comentario->curtidas;
 	}
 }
